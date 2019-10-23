@@ -1,9 +1,7 @@
-# Portfolio-Website
+# Portfolio-Website2.0
 
-- This project aims to display myself as a person and my current abilities in web development.
-- The website allows the user to learn about myself, see my portfolio, check my resume, and contact me through email.
-- The project uses several languages includes HTML, CSS, PHP, Javascript, and JQuery. All pictures were taken by me.
-
-Note: This project is still in progress and will continually grow as I learn more!
-
-Future updates: Implement increased responsiveness for mobile users
+- My Portfolio-Website2.0 aims to display myself as a person and my current abilities in web development.
+- The website allows the user to learn about myself, see my portfolio, check my resume, and see contact information.
+- This website is a single page app that implements the app shell model.
+- All UI design and code is from scratch. Languages used includes HTML, CSS, PHP, Javascript, JQuery.
+- Utilizes the React framework.
