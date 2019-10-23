@@ -1,0 +1,152 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #333333;
+}
+
+nav {
+	display: sticky;
+	left:0px;
+
+	height: 11vh;
+	background-color: #202020;
+	text-align: center;
+}
+
+#face-logo{
+	position: absolute;
+	top: 1vh;
+	left: 1vw;
+	max-height: 9vh;
+	border: 3px solid #dfdfdf;
+	border-radius: 50%;
+	box-sizing: border-box;
+}
+
+#desktop-nav{
+	list-style: none;
+	display: inline-block;
+	margin: 0;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+#desktop-nav li {
+	float: left;
+	height: 100%;
+}
+
+#desktop-nav button {
+	background: none;
+	color: white;
+	height: 100%;
+	width: 15vw;
+	margin-left: 1vw;
+	cursor: pointer;
+	border: none;
+	outline: none;
+}
+
+li button:hover{
+	background-color: blue;
+
+}
+
+li button img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	filter: grayscale(1);
+	-webkit-transition: 800ms ease-out;
+	-moz-transition: 800ms ease-out;
+	-o-transition: 800ms ease-out;
+	-ms-transition: 800ms ease-out;
+	transition: 800ms ease-out;
+	opacity: 0.8;
+}
+
+li button img:hover {
+	opacity: 1;
+	transition: 200ms;
+}
+
+li button img:active {
+	filter: grayscale(0);
+	transition: 0ms;
+}
+
+#dropdown {
+	color: white;
+	display: none;
+	float: right;
+
+	height: 100%;
+	width: 10%;
+	list-style: none;
+	padding-top: 2vh;
+	box-sizing: border-box;
+
+	font-weight: bold;
+	font-size: 5.5vh;
+}
+
+#dropdown ul {
+	height:0;
+	overflow: hidden;
+
+	position: absolute;
+	right:0;
+	top:11vh;
+	
+	padding: 0;
+	margin: 0;
+	max-width: 30%;
+	z-index: 1;
+
+	list-style: none;
+	background-color: #2b2b2b;
+
+	-webkit-transition: height 0.5s ease-out;
+	-moz-transition: height 0.5s ease-out;
+	-o-transition: height 0.5s ease-out;
+	-ms-transition: height 0.5s ease-out;
+	transition: height 0.5s ease-out;
+}
+
+#dropdown:hover ul {
+	
+    height:89vh;	
+}
+
+#dropdown li {
+	width: 100%;
+	margin-top: 2px;
+}
+
+#dropdown button {
+	background: none;
+	color: white;
+	height: 100px;
+	width: 100%;
+	cursor: pointer;
+	border:  none;
+	outline: none;
+}
+
+#main-cover{
+	opacity: 0;
+	background-color: black;
+	position: absolute;
+	width: 100vw;
+	height: 89vh;
+}
+
+main{
+	display: none;
+}
+
+@media screen and (max-width: 775px) {
+	#desktop-nav { display: none; }
+	#dropdown {display: inline-block;}
+}
+
