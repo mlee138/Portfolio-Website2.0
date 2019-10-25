@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css'
+import './about-me.css'
+import './portfolio.css'
+import './resume.css'
+import './resume.css'
 
 class NavigationButtons extends React.Component{
 	render(){

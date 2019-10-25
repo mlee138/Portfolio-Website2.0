@@ -1,0 +1,75 @@
+#about-me{
+	color: white;
+	padding: 20px;
+}
+
+
+
+.about-me-row {
+	display:flex;
+	justify-content: center;
+}
+
+.about-me-section{
+
+	position:relative;
+	width: 40%;
+	height: 41vh;
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+@media screen and (max-width: 775px) {
+	#about-me{ padding: 0px; }
+	.about-me-section { width: 50%; height: 44.5vh;}
+	.about-me-section p { font-size: 0.8em; }
+}
+
+@media screen and (max-width: 1100px) {
+	.about-me-section { font-size: 0.9em; }	
+}
+
+.about-me-section img{
+	display:block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 1;
+}
+
+.about-me-section .overlay {
+	background-color: grey;
+	position:absolute;
+	top:0;
+	right:0;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	-webkit-transition: 0.3s ease-out;
+	-moz-transition: 0.3s ease-out;
+	-o-transition: 0.3s ease-out;
+	-ms-transition: 0.3s ease-out;
+	transition: 0.3s ease-out;
+}
+
+.about-me-section:hover .overlay{
+	opacity: 0.75;
+	-webkit-transition: 0.5s ease-out;
+	-moz-transition: 0.5s ease-out;
+	-o-transition: 0.5s ease-out;
+	-ms-transition: 0.5s ease-out;
+	transition: 0.5s ease-out;
+}
+
+.about-me-section p {
+	color: white;
+	text-indent: 30px;
+	position:absolute;
+	top:0%;
+	left:0%;
+	overflow: hidden;
+	padding: 10%;
+
+}
