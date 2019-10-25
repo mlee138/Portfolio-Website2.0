@@ -4,7 +4,7 @@ import './index.css'
 import './about-me.css'
 import './portfolio.css'
 import './resume.css'
-import './resume.css'
+import './contact.css'
 
 class NavigationButtons extends React.Component{
 	render(){
@@ -39,13 +39,23 @@ class Navigation extends React.Component{
 	render(){
 		return(
 			<nav>
-				<a href="https://www.linkedin.com/in/matthewlee1297/" target="_blank" rel="noopener noreferrer"><img id="face-logo" src="Matt_Lee_Icon.ico" alt="Matt Lee Face Icon" /></a>
+				<a id="icon" href="https://www.linkedin.com/in/matthewlee1297/" target="_blank" rel="noopener noreferrer"><img id="face-logo" src="Matt_Lee_Icon.ico" alt="Matt Lee Face Icon" /></a>
 				<NavigationButtons Id="desktop-nav"/>
 				<div id="dropdown">
 					<span>=</span>
 					<NavigationButtons Id=""/>
 				</div>
 			</nav>
+		);
+	}
+}
+
+// ===========================================
+
+class Banner extends React.Component{
+	render(){
+		return(
+			<img id="banner" src={this.props.banner} alt={this.props.alt}/>
 		);
 	}
 }
@@ -94,7 +104,27 @@ class AboutMe extends React.Component{
 	}
 }
 
-class ProjectCard extends React.Component{
+// ===========================================
+
+class WebsiteCard extends React.Component{
+	render(){
+		return (
+			<div className="card">
+				<div className="image-container">
+					<img src={this.props.image} alt={this.props.alt}/>
+				</div>
+				<hr/>
+				<div className="card-text">
+					<h4>{this.props.title}</h4>
+					<p>{this.props.text}</p>
+					<a href={this.props.github} target="_blank">Check it out on Github</a>
+				</div>
+			</div>
+		);
+	}
+}
+
+class GraphicCard extends React.Component{
 	render(){
 		return (
 			<div className="card">
@@ -111,7 +141,7 @@ class ProjectCard extends React.Component{
 	}
 }
 
-class ProjectMoreToCome extends React.Component{
+class MoreToCome extends React.Component{
 	render(){
 		return(
 			<div class="card more-to-come">
@@ -127,63 +157,105 @@ class Portfolio extends React.Component{
 			<div id="portfolio">
 				<h3>- Websites -</h3>
 				<div className="card-wrapper">
-					<ProjectCard 
+					<WebsiteCard 
 						image="images/Tip-Calculator-sbs.png"
 						alt="Tip Calculator"
 						title="Tip Calculator (2019)"
-						text="In an attempt to get more familiar with HTML, CSS, and forms, I developed a tip calculator. It evens includes a dark mode!"/>
-					<ProjectCard 
+						text="In an attempt to get more familiar with HTML, CSS, and forms, I developed a tip calculator. It evens includes a dark mode!"
+						github="https://github.com/mlee138/Tip-Calculator"/>
+					<WebsiteCard 
 						image="images/matt-world-clock.png"
 						alt="World Clock"
 						title="Matt's World Clock (2019)"
-						text="This clock allows you to check the time from multiple locations. It utilizes a weather API to allow the user to check the weather for the respective location."/>
-					<ProjectCard 
+						text="This clock allows you to check the time from multiple locations. It utilizes a weather API to allow the user to check the weather for the respective location."
+						github="https://github.com/mlee138/Matts-World-Clock"/>
+					<WebsiteCard 
 						image="images/portfolio-website.png"
 						alt="Portfolio Website"
 						title="Portfolio Website (2019)"
-						text="It's this website you're looking at!"/>
-					<ProjectMoreToCome/>
+						text="It's this website you're looking at!"
+						github=""/>
+					<MoreToCome/>
 				</div>
 				<hr />
 
 				<h3>- Photoshop/Illustrator -</h3>
 				<div className="card-wrapper">
-					<ProjectCard 
+					<GraphicCard 
 						image="images/Tastebuds_Spring_GIM.png"
 						alt="Cooking Club graphic"
 						title="Cooking Club Poster(2017)"
 						text="I designed this poster to bolster advertisement for my club, &quot;Tastebuds'&quot;, general interest meeting."/>
-					<ProjectCard 
+					<GraphicCard 
 						image="images/FINAL_Spring_UltimatePR_2019_V2.png"
 						alt="Power Ranking graphic"
 						title="Power Ranking (2018)"
 						text="Every semester, players compete in tournaments to see who is the best 'Smash Bros. Ultimate' player. This graphic helps illustrate the achievements of those players."/>
-					<ProjectCard 
+					<GraphicCard 
 						image="images/apparel_1.png"
 						alt="Club Apparel Design"
 						title="Club Apparel Design (2018)"
 						text="To help advertise our club, 'Video Game Association,' I made the design for a custom hoodie."/>
-					<ProjectCard 
+					<GraphicCard 
 						image="images/gill-fighting.png"
 						alt="Anti-fish-fighting"
 						title="Anti-fish-fighting (2019)"
 						text="As a parody of 'Finding Nemo' this graphic depicts the fish character 'Gill' with a different and potentially darker backstory and a campaign to stop &quot;fish fighting.&quot;"/>
-					<ProjectMoreToCome/>
+					<MoreToCome/>
 				</div>
 			</div>
 		);
 	}
 }
 
+// ===========================================
+
 class Resume extends React.Component{
 	render(){
-		return <h1>Resume</h1>;
+		return(
+			<div id="resume">
+		    	<a href="images/Matthew_Lee_Resume_Fall_2019.pdf" download>- Click here to download -</a>
+		    	<br/>
+		    	<embed src="images/Matthew_Lee_Resume_Fall_2019.pdf"/>
+			</div>
+		);
+	}
+}
+
+// ===========================================
+
+class ContactMethod extends React.Component {
+	render() {
+		return(
+			<section>
+				<a href={this.props.link} target="_blank"><img src={this.props.image} alt={this.props.alt}/></a>
+				<p>{this.props.text}</p>
+			</section>
+		);
 	}
 }
 
 class Contact extends React.Component{
 	render(){
-		return <h1>Contact</h1>;
+		return(
+			<div id="contact">
+				<ContactMethod 
+					link="tel:+1-646-226-5381"
+					image="images/phone.png"
+					alt="phone number"
+					text="(646)226-5381"/>
+				<ContactMethod 
+					link="mailto:mlee2197@gmail.com"
+					image="images/email.png"
+					alt="email image"
+					text="mlee2197@gmail.com"/>
+				<ContactMethod 
+					link="https://www.linkedin.com/in/matthewlee1297/"
+					image="images/Linkedin_Logo.png"
+					alt="Linkedin Logo"
+					text="Matthew Lee"/>
+			</div>
+		);
 	}
 }
 
