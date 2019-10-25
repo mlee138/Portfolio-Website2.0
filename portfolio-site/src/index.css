@@ -219,7 +219,10 @@ li button img:active {
 
 /*=Portfolio====================================*/
 
-#portfolio {
+#portfolio > hr{
+	margin: 0px 20px 0px 20px;
+	border-radius: 50%; 
+	border-color:#696969;
 }
 
 .card-wrapper{
@@ -286,3 +289,10 @@ li button img:active {
 	position: relative;
 	top: 80%;
 }
+
+h3 {
+	margin-top: 30px;
+	text-align: center;
+	color: #d4d4d4;
+}
+

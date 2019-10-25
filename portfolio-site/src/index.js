@@ -121,6 +121,7 @@ class Portfolio extends React.Component{
 	render(){
 		return(
 			<div id="portfolio">
+				<h3>- Websites -</h3>
 				<div className="card-wrapper">
 					<ProjectCard 
 						image="images/Tip-Calculator-sbs.png"
@@ -139,11 +140,14 @@ class Portfolio extends React.Component{
 						text="It's this website you're looking at!"/>
 					<ProjectMoreToCome/>
 				</div>
+				<hr />
+
+				<h3>- Photoshop/Illustrator -</h3>
 				<div className="card-wrapper">
 					<ProjectCard 
 						image="images/Tastebuds_Spring_GIM.png"
 						alt="Cooking Club graphic"
-						title="Cooking Club Poster(2019)"
+						title="Cooking Club Poster(2017)"
 						text="I designed this poster to bolster advertisement for my club, &quot;Tastebuds'&quot;, general interest meeting."/>
 					<ProjectCard 
 						image="images/FINAL_Spring_UltimatePR_2019_V2.png"
