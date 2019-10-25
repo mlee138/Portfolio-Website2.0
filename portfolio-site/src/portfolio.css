@@ -27,12 +27,6 @@
 	box-sizing: border-box;
 }
 
-.card .image-conatiner{
-	display: flex;
-	justify-content: center;
-	padding:5px;
-}
-
 .card img {
 	width: 100%;
 	height: 150px;
@@ -52,6 +46,23 @@
 .card-text {
 	padding: 0px 5px 0px 7px;
 	height: 100%;
+}
+
+.card-text a {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	padding: 7px;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background-color: #5033dc;
+	color: white;
+	text-decoration: none;
+	cursor:pointer;
+}
+
+.card-text a:active {
+	background-color: #2d1f73;
 }
 
 .more-to-come {

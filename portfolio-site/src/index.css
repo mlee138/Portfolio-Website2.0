@@ -14,14 +14,14 @@ nav {
 	text-align: center;
 }
 
-a {
+#icon {
 	position: absolute;
 	top: 1vh;
 	left: 1vw;
 	cursor: default;
 }
 
-a #face-logo{
+#icon #face-logo{
 	position: relative;
 	max-height: 9vh;
 	border: 3px solid #dfdfdf;

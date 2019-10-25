@@ -1,0 +1,20 @@
+#resume{
+	padding: 3vh;
+	text-align: center;
+	height: 70vh;
+}
+
+#resume a{
+	display: block;
+	text-decoration: none;
+	color: lightblue;
+}
+
+#resume a:active {
+	color: blue;
+}
+
+#resume embed {
+	height: 100%;
+	width: 70%;
+}

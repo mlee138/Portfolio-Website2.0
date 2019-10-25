@@ -1,0 +1,20 @@
+#contact{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	padding: 3vw;
+}
+
+#contact section{
+	text-align: center;
+	color: white;
+	margin: 3vw;
+}
+
+#contact img {
+	max-width: 18vw;
+}
+
+@media screen and (max-width: 775px) {
+	#contact { flex-direction: column; }
+}
