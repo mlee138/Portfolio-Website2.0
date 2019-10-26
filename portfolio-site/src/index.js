@@ -6,6 +6,7 @@ import './about.css'
 import './portfolio.css'
 import './resume.css'
 import './contact.css'
+import './banner.css'
 
 class App extends React.Component{
 	constructor(props){
@@ -86,7 +87,6 @@ class NavigationButtons extends React.Component{
 		(this.state.portfolio ? content["colorPortfolio"]='color' : content["colorPortfolio"]='');
 		(this.state.resume ? content["colorResume"]='color' : content["colorResume"]='');
 		(this.state.contact ? content["colorContact"]='color' : content["colorContact"]='');
-			console.log(content);
 		
 		var selected = {
 			about: '',
@@ -112,8 +112,6 @@ class NavigationButtons extends React.Component{
 				break;
 		}
 
-		console.log(selected);
-	
 		return(
 			<ul id={this.props.Id}>
 				<li id={selected["about"]}>
@@ -169,7 +167,13 @@ function Startup(){
 
 //============================================
 
-
+function Banner(props){
+	return(
+		<div id="banner-container">
+			<img src={props.banner} alt={props.alt}/>
+		</div>
+	);
+}
 
 // ===========================================
 
@@ -188,7 +192,7 @@ class About extends React.Component{
 	render(){
 		return( 
 			<div id="about">
-				
+				<Banner banner="nav-1.jpg" alt="About Me"/>
 				<div className="about-row">
 				<AboutSection 
 					image="images/Linkedin.jpg"
@@ -259,6 +263,7 @@ class Portfolio extends React.Component{
 	render(){
 		return(
 			<div id="portfolio">
+				<Banner banner="nav-2.jpg" alt="Portfolio"/>
 				<h3>- Websites -</h3>
 				<div className="card-wrapper">
 					<WebsiteCard 
@@ -318,8 +323,7 @@ class Resume extends React.Component{
 	render(){
 		return(
 			<div id="resume">
-		    	<a href="images/Matthew_Lee_Resume_Fall_2019.pdf" rel="noopener noreferrer" download>- Click here to download -</a>
-		    	<br/>
+				<Banner banner="nav-3.jpg" alt="Resume"/>
 		    	<embed src="images/Matthew_Lee_Resume_Fall_2019.pdf"/>
 			</div>
 		);
@@ -332,6 +336,7 @@ class Contact extends React.Component{
 	render(){
 		return(
 			<div id="contact">
+				<Banner banner="nav-4.jpg" alt="Contact"/>
 				<a className="green" href="tel:+1-646-226-5381" rel="noopener noreferrer">
 					<img src="images/phone.png" alt="click to call"/>
 					<p>Phone: <span>(646)226-5381</span></p></a>

@@ -191,15 +191,3 @@ main {
 	padding:0;
 	display: flex;
 }
-
-#banner-container{
-	margin:0;
-	padding: 0;
-}
-
-#banner{
-	position: sticky;
-	left:0;
-	top:10vh;
-	height: 90vh;
-}

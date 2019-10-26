@@ -1,22 +1,8 @@
 #resume{
-	padding: 5vh;
 	text-align: center;
-	height: 75vh;
-	max-width: 50%;
-	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
-}
-
-#resume a{
-	display: block;
-	text-decoration: none;
-	color: lightblue;
-}
-
-#resume a:active {
-	color: blue;
 }
 
 #resume embed {
@@ -25,5 +11,6 @@
 }
 
 @media screen and (max-width: 775px) {
-	#resume embed { max-width: 100%; }
+	#resume {padding-top: 110px;}
+	#resume embed {height: 65vh;}
 }

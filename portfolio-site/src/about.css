@@ -1,6 +1,7 @@
 #about{
-	color: white;
-	padding: 6.5vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .about-row {
@@ -16,7 +17,7 @@
 }
 
 @media screen and (max-width: 775px) {
-	#about{ padding: 0px; }
+	#about{ padding: 0px; padding-top: 110px;}
 	.about-row { flex-direction: column; }
 	.about-section { 
 		width: 90%; 
