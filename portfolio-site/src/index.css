@@ -81,6 +81,10 @@ li button img:active {
 	transition: 0ms;
 }
 
+.color {
+	filter: grayscale(0);
+}
+
 #dropdown {
 	color: white;
 	display: none;
