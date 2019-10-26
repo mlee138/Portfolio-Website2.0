@@ -29,13 +29,26 @@ nav {
 	box-sizing: border-box;
 }
 
-#contact-info{
-	color:white;
+#contact-info {
 	position: absolute;
-	top:4vh;
-	right:2vw;
+	top: 3.5vh;
+	right: 2vw;
 
 }
+
+#contact-info a{
+	color:white;
+	text-decoration: none;
+	letter-spacing: 2px;
+}
+
+#contact-info a:hover{
+	border-bottom: 2px solid white;
+}
+
+#contact-info a:first-child{
+	margin-right: 50px;
+} 
 
 #desktop-nav{
 	display: flex;
@@ -165,6 +178,9 @@ li button img:active {
 
 @media screen and (max-width: 775px) {
 	#desktop-nav { display: none; }
+	#contact-info{ display:none; }
+	#nav-selected { height: 30vh; }
+	#nav-selected button img{ height: 29vh; }
 	#dropdown {display: inline-block;}
 	main{ flex-direction: column; }
 }

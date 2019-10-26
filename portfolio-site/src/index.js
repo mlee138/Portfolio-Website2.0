@@ -30,8 +30,8 @@ class App extends React.Component{
 			<nav>
 				<a id="icon" href="https://www.linkedin.com/in/matthewlee1297/" target="_blank" rel="noopener noreferrer"><img id="face-logo" src="Matt_Lee_Icon.ico" alt="Matt Lee Face Icon" /></a>
 				<div id="contact-info">
-					<a>phone number </a>
-					<a>email</a>
+					<a id="phone" href="tel:+1-646-226-5381" rel="noopener noreferrer">646 226 5381</a>
+					<a id="email" href="mailto:mlee2197@gmail.com" rel="noopener noreferrer">mlee2197@gmail.com</a>
 				</div>
 				<div id="dropdown">
 					<span>=</span>

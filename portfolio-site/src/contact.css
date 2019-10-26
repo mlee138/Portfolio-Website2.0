@@ -4,9 +4,8 @@
 	flex-direction: row;
 	align-items: center;
 	padding: 3vw;
+	margin: 0 auto;
 }
-
-
 
 #contact a{
 	text-align: center;
