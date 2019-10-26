@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css'
+import './startup.css'
 import './about.css'
 import './portfolio.css'
 import './resume.css'
@@ -23,8 +24,6 @@ class App extends React.Component{
 		this.setState(newState);
 	}
 
-
-
 	render(){
 		return(
 		<div>
@@ -36,9 +35,7 @@ class App extends React.Component{
 					<NavigationButtons Id="" handleClick={this.handleClick}/>
 				</div>
 			</nav>
-			<main>
-				<ChooseContent content={this.state.currentContent}/>
-			</main>
+			<ChooseContent content={this.state.currentContent}/>
 		</div>
 		);
 	}
@@ -71,32 +68,71 @@ class NavigationButtons extends React.Component{
 		(this.state.portfolio ? portfolioClasses='color' : portfolioClasses=undefined);
 		(this.state.resume ? resumeClasses='color' : resumeClasses=undefined);
 		(this.state.contact ? contactClasses='color' : contactClasses=undefined);
+
 		return(
 			<ul id={this.props.Id}>
 				<li>
 					<button	
 						onClick={this.handleClickData.bind(this, "about")}>
-						<img className={aboutClasses}  src="Background-1.jpg" alt="About me" />
+						<img className={aboutClasses}  src="nav-1.jpg" alt="About me" />
 					</button></li>
 				<li>
 					<button
 						onClick={this.handleClickData.bind(this, "portfolio")}>
-						<img className={portfolioClasses} src="Background-2.jpg" alt="Portfolio" />
+						<img className={portfolioClasses} src="nav-2.jpg" alt="Portfolio" />
 					</button></li>
 				<li>
 					<button
 						onClick={this.handleClickData.bind(this, "resume")}>
-						<img className={resumeClasses} src="Background-3.jpg" alt="Resume" />
+						<img className={resumeClasses} src="nav-3.jpg" alt="Resume" />
 					</button></li>
 				<li>
 					<button
 						onClick={this.handleClickData.bind(this, "contact")}>
-						<img className={contactClasses} src="Background-4.jpg" alt="Contact" />
+						<img className={contactClasses} src="nav-4.jpg" alt="Contact" />
 					</button></li>
 			</ul>
 		);
 	}
 }
+
+function ChooseContent(props){
+	const content = props.content;
+	switch(content){
+		case 'about':
+			return (
+				<main>
+					<div id="banner-container"><img id="banner" src="images/banner-1.png" alt="About me"/></div>
+					<About/>
+				</main>
+			);
+		case "portfolio":
+			return (
+				<main>
+					<div id="banner-container"><img id="banner" src="images/banner-2.png" alt="Portfolio"/></div>
+					<Portfolio/>
+				</main>
+			);
+		case "resume":
+			return (
+				<main>
+					<div id="banner-container"><img id="banner" src="images/banner-3.png" alt="Resume"/></div>
+					<Resume/>
+				</main>
+			);
+		case "contact":
+			return (
+				<main>
+					<div id="banner-container"><img id="banner" src="images/banner-4.png" alt="Contact"/></div>
+					<Contact/>
+				</main>
+			);
+		default:
+			return <Startup/>;
+	}
+}
+
+// ===========================================
 
 function Startup(){
 	return (
@@ -107,32 +143,6 @@ function Startup(){
 	);
 }
 
-function ChooseContent(props){
-	const content = props.content;
-	switch(content){
-		case 'about':
-			return <About/>;
-		case "portfolio":
-			return <Portfolio/>;
-		case "resume":
-			return <Resume/>;
-		case "contact":
-			return <Contact/>;
-		default:
-			return <Startup/>;
-	}
-}
-
-// ===========================================
-/*
-class Banner extends React.Component{
-	render(){
-		return(
-			<img id="banner" src={this.props.banner} alt={this.props.alt}/>
-		);
-	}
-}
-*/
 // ===========================================
 
 class AboutSection extends React.Component{
@@ -295,36 +305,19 @@ class Resume extends React.Component{
 
 // ===========================================
 
-class ContactMethod extends React.Component {
-	render() {
-		return(
-			<section>
-				<a href={this.props.link} target="_blank" rel="noopener noreferrer"><img src={this.props.image} alt={this.props.alt}/></a>
-				<p>{this.props.text}</p>
-			</section>
-		);
-	}
-}
-
 class Contact extends React.Component{
 	render(){
 		return(
 			<div id="contact">
-				<ContactMethod 
-					link="tel:+1-646-226-5381"
-					image="images/phone.png"
-					alt="phone number"
-					text="(646)226-5381"/>
-				<ContactMethod 
-					link="mailto:mlee2197@gmail.com"
-					image="images/email.png"
-					alt="email image"
-					text="mlee2197@gmail.com"/>
-				<ContactMethod 
-					link="https://www.linkedin.com/in/matthewlee1297/"
-					image="images/Linkedin_Logo.png"
-					alt="Linkedin Logo"
-					text="Matthew Lee"/>
+				<a className="green" href="tel:+1-646-226-5381" rel="noopener noreferrer">
+					<img src="images/phone.png" alt="click to call"/>
+					<p>Phone: <span>(646)226-5381</span></p></a>
+				<a className="red" href="mailto:mlee2197@gmail.com" rel="noopener noreferrer">
+					<img src="images/email.png" alt="send email"/>
+					<p>Email: <span>mlee2197@gmail.com</span></p></a>
+				<a className="blue" href="https://www.linkedin.com/in/matthewlee1297/" target="_blank" rel="noopener noreferrer">
+					<img src="images/Linkedin_Logo.png" alt="Linkedin Profile"/>
+					<p><span>View profile</span></p></a>
 			</div>
 		);
 	}

@@ -1,9 +1,7 @@
 #about{
 	color: white;
-	padding: 9vh;
+	padding: 6.5vh;
 }
-
-
 
 .about-row {
 	display:flex;
@@ -11,18 +9,21 @@
 }
 
 .about-section{
-
 	position:relative;
 	width: 40%;
 	height: 35vh;
-	margin:0;
-	padding:0;
-	box-sizing: border-box;
+	margin: 8px;
 }
 
 @media screen and (max-width: 775px) {
 	#about{ padding: 0px; }
-	.about-section { width: 50%; height: 44.5vh;}
+	.about-row { flex-direction: column; }
+	.about-section { 
+		width: 90%; 
+		height: 44.5vh;
+		margin: 0 auto;
+		margin-top: 15px;
+	}
 }
 
 .about-section img{
