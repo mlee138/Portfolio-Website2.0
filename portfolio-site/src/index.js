@@ -29,13 +29,19 @@ class App extends React.Component{
 		<div>
 			<nav>
 				<a id="icon" href="https://www.linkedin.com/in/matthewlee1297/" target="_blank" rel="noopener noreferrer"><img id="face-logo" src="Matt_Lee_Icon.ico" alt="Matt Lee Face Icon" /></a>
-				<NavigationButtons Id="desktop-nav" handleClick={this.handleClick}/>
+				<div id="contact-info">
+					<a>phone number </a>
+					<a>email</a>
+				</div>
 				<div id="dropdown">
 					<span>=</span>
 					<NavigationButtons Id="" handleClick={this.handleClick}/>
 				</div>
 			</nav>
-			<ChooseContent content={this.state.currentContent}/>
+			<main>
+				<NavigationButtons Id="desktop-nav" handleClick={this.handleClick}/>
+				<ChooseContent content={this.state.currentContent}/>
+			</main>
 		</div>
 		);
 	}
@@ -49,7 +55,8 @@ class NavigationButtons extends React.Component{
 			about: false,
 			portfolio: false,
 			resume: false,
-			contact: false
+			contact: false,
+			selected: ""
 		};
 
 		this.handleClickData = this.handleClickData.bind(this);
@@ -57,39 +64,77 @@ class NavigationButtons extends React.Component{
 
 	handleClickData(data){
 		var updateState = {};
+
 		updateState[data] = true;
 		this.setState(updateState);
+
+		updateState["selected"] = data;
+		this.setState(updateState);
+
 		this.props.handleClick(data);
 	}
 
 	render(){
-		var aboutClasses, portfolioClasses, resumeClasses, contactClasses;
-		(this.state.about ? aboutClasses='color' : aboutClasses=undefined);
-		(this.state.portfolio ? portfolioClasses='color' : portfolioClasses=undefined);
-		(this.state.resume ? resumeClasses='color' : resumeClasses=undefined);
-		(this.state.contact ? contactClasses='color' : contactClasses=undefined);
+		var content = {
+			colorAbout: "",
+			colorPortfolio:"",
+			colorResume:"",
+			colorContact:""
+		};
+			
+		(this.state.about ? content["colorAbout"]='color' : content["colorAbout"]='');
+		(this.state.portfolio ? content["colorPortfolio"]='color' : content["colorPortfolio"]='');
+		(this.state.resume ? content["colorResume"]='color' : content["colorResume"]='');
+		(this.state.contact ? content["colorContact"]='color' : content["colorContact"]='');
+			console.log(content);
+		
+		var selected = {
+			about: '',
+			portfolio:'',
+			resume: '',
+			contact: ''
+		};
 
+		switch(this.state.selected){
+			case 'about':
+				selected["about"] = 'nav-selected';
+				break;
+			case "portfolio":
+				selected["portfolio"] = 'nav-selected';
+				break;
+			case "resume":
+				selected["resume"] = 'nav-selected';
+				break;
+			case "contact":
+				selected["contact"] = 'nav-selected';
+				break;
+			default:
+				break;
+		}
+
+		console.log(selected);
+	
 		return(
 			<ul id={this.props.Id}>
-				<li>
+				<li id={selected["about"]}>
 					<button	
 						onClick={this.handleClickData.bind(this, "about")}>
-						<img className={aboutClasses}  src="nav-1.jpg" alt="About me" />
+						<img className={content["colorAbout"]}  src="images/Banner-1.png" alt="About me" />
 					</button></li>
-				<li>
+				<li id={selected["portfolio"]}>
 					<button
 						onClick={this.handleClickData.bind(this, "portfolio")}>
-						<img className={portfolioClasses} src="nav-2.jpg" alt="Portfolio" />
+						<img className={content["colorPortfolio"]} src="images/Banner-2.png" alt="Portfolio" />
 					</button></li>
-				<li>
+				<li id={selected["resume"]}>
 					<button
 						onClick={this.handleClickData.bind(this, "resume")}>
-						<img className={resumeClasses} src="nav-3.jpg" alt="Resume" />
+						<img className={content["colorResume"]} src="images/Banner-3.png" alt="Resume" />
 					</button></li>
-				<li>
+				<li id={selected["contact"]}>
 					<button
 						onClick={this.handleClickData.bind(this, "contact")}>
-						<img className={contactClasses} src="nav-4.jpg" alt="Contact" />
+						<img className={content["colorContact"]} src="images/Banner-4.png" alt="Contact" />
 					</button></li>
 			</ul>
 		);
@@ -100,33 +145,13 @@ function ChooseContent(props){
 	const content = props.content;
 	switch(content){
 		case 'about':
-			return (
-				<main>
-					<div id="banner-container"><img id="banner" src="images/banner-1.png" alt="About me"/></div>
-					<About/>
-				</main>
-			);
+			return <About/>;
 		case "portfolio":
-			return (
-				<main>
-					<div id="banner-container"><img id="banner" src="images/banner-2.png" alt="Portfolio"/></div>
-					<Portfolio/>
-				</main>
-			);
+			return <Portfolio/>;
 		case "resume":
-			return (
-				<main>
-					<div id="banner-container"><img id="banner" src="images/banner-3.png" alt="Resume"/></div>
-					<Resume/>
-				</main>
-			);
+			return <Resume/>;
 		case "contact":
-			return (
-				<main>
-					<div id="banner-container"><img id="banner" src="images/banner-4.png" alt="Contact"/></div>
-					<Contact/>
-				</main>
-			);
+			return <Contact/>;
 		default:
 			return <Startup/>;
 	}
