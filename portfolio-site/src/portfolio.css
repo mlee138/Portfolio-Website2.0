@@ -18,13 +18,12 @@
 	margin: 25px;
 	margin-bottom:50px;
 	border: 1px solid #999;
+	box-sizing: border-box;
 	border-radius:5px;
-	font-family: 'manjari', serif;
 	background-color: white;
 	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.4);
 	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.4);
 	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.4);
-	box-sizing: border-box;
 }
 
 .card img {
@@ -46,6 +45,11 @@
 .card-text {
 	padding: 0px 5px 0px 7px;
 	height: 100%;
+	font-size: 
+}
+
+.card-text p {
+	font-size: 90%;
 }
 
 .card-text a {

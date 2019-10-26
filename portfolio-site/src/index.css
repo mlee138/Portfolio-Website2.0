@@ -6,12 +6,12 @@ body {
 }
 
 nav {
-	display: sticky;
-	left:0px;
-
+	position: sticky;
+	top: 0px;
 	height: 11vh;
 	background-color: #202020;
 	text-align: center;
+	z-index: 2;
 }
 
 #icon {
@@ -146,4 +146,19 @@ li button img:active {
 @media screen and (max-width: 775px) {
 	#desktop-nav { display: none; }
 	#dropdown {display: inline-block;}
+}
+
+#startup{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	height: 70vh;
+	color: #ccc;
+}
+
+#startup p {
+	position:absolute;
+	top: 11vh;
+	left: 40px;
 }

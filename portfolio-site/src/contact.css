@@ -6,6 +6,8 @@
 }
 
 #contact section{
+	position: relative;
+	top:9vh;
 	text-align: center;
 	color: white;
 	margin: 3vw;
@@ -17,4 +19,5 @@
 
 @media screen and (max-width: 775px) {
 	#contact { flex-direction: column; }
+	#contact section { position: static; }
 }

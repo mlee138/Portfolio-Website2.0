@@ -11,7 +11,7 @@ class App extends React.Component{
 		super(props);
 
 		this.state = {
-			currentContent: "about"
+			currentContent: "start"
 		};
 
 		this.handleClick = this.handleClick.bind(this);
@@ -41,22 +41,6 @@ class App extends React.Component{
 			</main>
 		</div>
 		);
-	}
-}
-
-function ChooseContent(props){
-	const content = props.content;
-	switch(content){
-		case 'about':
-			return <About/>;
-		case "portfolio":
-			return <Portfolio/>;
-		case "resume":
-			return <Resume/>;
-		case "contact":
-			return <Contact/>;
-		default:
-			return;
 	}
 }
 
@@ -111,6 +95,31 @@ class NavigationButtons extends React.Component{
 					</button></li>
 			</ul>
 		);
+	}
+}
+
+function Startup(){
+	return (
+		<div id="startup">
+			<p>^--- that's me</p>
+			<h1>Hi there! I'm Matthew Lee.<br/><br/>Choose a section to learn more about me.</h1>
+		</div>
+	);
+}
+
+function ChooseContent(props){
+	const content = props.content;
+	switch(content){
+		case 'about':
+			return <About/>;
+		case "portfolio":
+			return <Portfolio/>;
+		case "resume":
+			return <Resume/>;
+		case "contact":
+			return <Contact/>;
+		default:
+			return <Startup/>;
 	}
 }
 
@@ -205,14 +214,12 @@ class GraphicCard extends React.Component{
 	}
 }
 
-class MoreToCome extends React.Component{
-	render(){
-		return(
-			<div className="card more-to-come">
-				<p>MORE TO COME...</p>
-			</div>
-		);
-	}
+function MoreToCome(){
+	return(
+		<div className="card more-to-come">
+			<p>MORE TO COME...</p>
+		</div>
+	);
 }
 
 class Portfolio extends React.Component{
@@ -234,11 +241,11 @@ class Portfolio extends React.Component{
 						text="This clock allows you to check the time from multiple locations. It utilizes a weather API to allow the user to check the weather for the respective location."
 						github="https://github.com/mlee138/Matts-World-Clock"/>
 					<WebsiteCard 
-						image="images/portfolio-website.png"
+						image="images/portfolio-website2.png"
 						alt="Portfolio Website"
 						title="Portfolio Website (2019)"
 						text="It's this website you're looking at!"
-						github=""/>
+						github="https://github.com/mlee138/Portfolio-Website2.0"/>
 					<MoreToCome/>
 				</div>
 				<hr />
