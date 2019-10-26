@@ -8,7 +8,7 @@ body {
 nav {
 	position: sticky;
 	top: 0px;
-	height: 10vh;
+	height: 70px;
 	background-color: #202020;
 	text-align: center;
 	z-index: 2;
@@ -16,14 +16,14 @@ nav {
 
 #icon {
 	position: absolute;
-	top: 10%;
-	left: 2vw;
+	top: 8px;
+	left: 8px;
 	cursor: default;
 }
 
 #icon #face-logo{
 	position: relative;
-	max-height: 8vh;
+	height: 55px;
 	border: 3px solid #dfdfdf;
 	border-radius: 50%;
 	box-sizing: border-box;
@@ -31,9 +31,8 @@ nav {
 
 #contact-info {
 	position: absolute;
-	top: 3.5vh;
-	right: 2vw;
-
+	top: 23px;
+	right: 30px;
 }
 
 #contact-info a{
@@ -54,13 +53,15 @@ nav {
 	display: flex;
 	flex-direction: column;
 	position: sticky;
-	top:10vh;
+	top:70px;
 	left:0;
 	margin: 0;
 	padding: 0;
+	padding-top:5px;
 	height: 90vh;
-	background-color: black;
 	list-style: none;
+	background-color: #0e0e0e;
+	border-right: 2px solid black;
 }
 
 #desktop-nav li {
@@ -121,16 +122,15 @@ li button img:active {
 #dropdown {
 	color: white;
 	display: none;
-	float: right;
+	position: absolute;
+	top:0px;
+	right:0px;
 
-	height: 100%;
-	width: 10%;
-	list-style: none;
-	padding-top: 1.3vh;
-	box-sizing: border-box;
-
+	padding-top: 10px;
+	height: 90%;
+	width: 15%;
 	font-weight: bold;
-	font-size: 5.5vh;
+	font-size: 2em;
 }
 
 #dropdown ul {
@@ -139,11 +139,11 @@ li button img:active {
 
 	position: absolute;
 	right:0;
-	top:10vh;
-	
+	top:70px;
+	width: 40vw;
 	padding: 0;
 	margin: 0;
-	max-width: 40%;
+	
 	z-index: 1;
 
 	list-style: none;

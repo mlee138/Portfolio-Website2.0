@@ -162,8 +162,7 @@ function ChooseContent(props){
 function Startup(){
 	return (
 		<div id="startup">
-			<p>^--- that's me</p>
-			<h1>Hi there! I'm Matthew Lee.<br/><br/>Choose a section to learn more about me.</h1>
+			<h1>Hi there! I'm Matthew Lee.<br/><br/>Choose a section to get started.</h1>
 		</div>
 	);
 }
