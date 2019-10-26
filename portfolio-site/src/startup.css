@@ -1,0 +1,14 @@
+#startup{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	height: 70vh;
+	color: #ccc;
+}
+
+#startup p {
+	position:absolute;
+	top: 11vh;
+	left: 40px;
+}
