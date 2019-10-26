@@ -167,25 +167,28 @@ function Startup(){
 	);
 }
 
+//============================================
+
+
+
 // ===========================================
 
-class AboutSection extends React.Component{
-	render(){
-		return(
-			<section className="about-section">
-				<img src={this.props.image} alt={this.props.alt} />
-				<div className="overlay">
-					<p>{this.props.text}</p>
-				</div>
-			</section>
-		);
-	}
+function AboutSection(props){
+	return(
+		<section className="about-section">
+			<img src={props.image} alt={props.alt} />
+			<div className="overlay">
+				<p>{props.text}</p>
+			</div>
+		</section>
+	);
 }
 
 class About extends React.Component{
 	render(){
 		return( 
 			<div id="about">
+				
 				<div className="about-row">
 				<AboutSection 
 					image="images/Linkedin.jpg"
@@ -213,39 +216,35 @@ class About extends React.Component{
 
 // ===========================================
 
-class WebsiteCard extends React.Component{
-	render(){
-		return (
-			<div className="card">
-				<div className="image-container">
-					<img src={this.props.image} alt={this.props.alt}/>
-				</div>
-				<hr/>
-				<div className="card-text">
-					<h4>{this.props.title}</h4>
-					<p>{this.props.text}</p>
-					<a href={this.props.github} target="_blank" rel="noopener noreferrer">Check it out on Github</a>
-				</div>
+function WebsiteCard(props){
+	return (
+		<div className="card">
+			<div className="image-container">
+				<img src={props.image} alt={props.alt}/>
 			</div>
-		);
-	}
+			<hr/>
+			<div className="card-text">
+				<h4>{props.title}</h4>
+				<p>{props.text}</p>
+				<a href={props.github} target="_blank" rel="noopener noreferrer">Check it out on Github</a>
+			</div>
+		</div>
+	);
 }
 
-class GraphicCard extends React.Component{
-	render(){
-		return (
-			<div className="card">
-				<div className="image-container">
-					<img src={this.props.image} alt={this.props.alt}/>
-				</div>
-				<hr/>
-				<div className="card-text">
-					<h4>{this.props.title}</h4>
-					<p>{this.props.text}</p>
-				</div>
+function GraphicCard(props){
+	return (
+		<div className="card">
+			<div className="image-container">
+				<img src={props.image} alt={props.alt}/>
 			</div>
-		);
-	}
+			<hr/>
+			<div className="card-text">
+				<h4>{props.title}</h4>
+				<p>{props.text}</p>
+			</div>
+		</div>
+	);
 }
 
 function MoreToCome(){
