@@ -31,11 +31,9 @@ li button img {
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
+	-webkit-filter: grayscale(1);
 	filter: grayscale(1);
 	-webkit-transition: 800ms ease-out;
-	-moz-transition: 800ms ease-out;
-	-o-transition: 800ms ease-out;
-	-ms-transition: 800ms ease-out;
 	transition: 800ms ease-out;
 	opacity: 0.8;
 }
@@ -51,11 +49,14 @@ li button img:hover {
 }
 
 li button img:active {
+	-webkit-filter: grayscale(0);
+	-webkit-filter: brightness(110%);
 	filter: grayscale(0);
 	filter: brightness(110%);
 }
 
 .color {
+	-webkit-filter: grayscale(0);
 	filter: grayscale(0);
 }
 
@@ -124,6 +125,7 @@ li button img:active {
 }
 
 #nav-selected img {
+	-webkit-transition: height 0.5s ease-out;
 	transition: height 0.5s ease-out;
 }
 
