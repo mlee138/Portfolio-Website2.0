@@ -29,12 +29,17 @@
 	max-width: 18vw;
 }
 
+@media screen and (max-width: 1000px ){
+	#contact { margin-top: 31vh; }
+	#contact a {min-width: 25%;}
+}
+
 @media screen and (max-width: 775px) {
 	#contact {
 		flex-direction: column;
-		padding-top: 130px;
+		margin-top: 130px;
 	}
-	#contact a { position: static; min-width: 70%}
+	#contact a {min-width: 70%}
 }
 
 .green {

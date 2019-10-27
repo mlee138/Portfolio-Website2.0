@@ -3,14 +3,16 @@
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
+	border: 5px solid green;
 }
 
 #resume embed {
 	height: 100%;
 	width: 100%;
+	flex: 1 1 auto;
 }
 
 @media screen and (max-width: 775px) {
-	#resume {padding-top: 110px;}
-	#resume embed {height: 65vh;}
+	#resume {margin-top: 110px; height: 100%;justify-content: flex-end;}
+	#resume embed {}
 }

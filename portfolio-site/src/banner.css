@@ -9,10 +9,11 @@
 
 #banner-container img{
 	object-fit: cover;
+	object-position: 50% 49%;
 	width: 100%;
 	height: 100%;
 }
 
-@media screen and (max-width: 775px){
-	#banner-container { display: block; } 
+@media screen and (max-width: 1000px){
+	#banner-container { display: block;} 
 }

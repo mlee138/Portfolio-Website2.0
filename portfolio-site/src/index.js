@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css'
+import './navigation-list.css'
 import './startup.css'
 import './about.css'
 import './portfolio.css'
@@ -36,11 +37,11 @@ class App extends React.Component{
 				</div>
 				<div id="dropdown">
 					<span>=</span>
-					<NavigationButtons Id="" handleClick={this.handleClick}/>
+					<NavigationList Id="" handleClick={this.handleClick}/>
 				</div>
 			</nav>
 			<main>
-				<NavigationButtons Id="desktop-nav" handleClick={this.handleClick}/>
+				<NavigationList Id="desktop-nav" handleClick={this.handleClick}/>
 				<ChooseContent content={this.state.currentContent}/>
 			</main>
 		</div>
@@ -48,7 +49,7 @@ class App extends React.Component{
 	}
 }
 
-class NavigationButtons extends React.Component{
+class NavigationList extends React.Component{
 	constructor(props){
 		super(props);
 
@@ -207,7 +208,7 @@ class About extends React.Component{
 				<AboutSection 
 					image="images/Plant.png"
 					alt="Hobbies"
-					text="I try to spread out my free time to my different hobbies. I'll create graphics with Photoshop and Illustrator, go hiking, watch the latest movie, or maybe play games. Doing these activities has helped me gain a strong appreciation for the arts and the process of creating large-scale projects."/>
+					text="I try to spread out my free time between hobbies. I'll create graphics, go hiking, watch the latest movie, or maybe play games. Doing these activities has helped me gain a strong appreciation for the arts and the process of creating large-scale projects."/>
 				<AboutSection 
 					image="images/Elli.png"
 					alt="My Cat Ellie"
