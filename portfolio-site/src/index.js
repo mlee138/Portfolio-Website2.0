@@ -29,7 +29,7 @@ class App extends React.Component{
 	render(){
 		return(
 		<div>
-			<nav>
+			<header id="header">
 				<a id="icon" href="https://www.linkedin.com/in/matthewlee1297/" target="_blank" rel="noopener noreferrer"><img id="face-logo" src="Matt_Lee_Icon.ico" alt="Matt Lee Face Icon" /></a>
 				<div id="contact-info">
 					<a id="phone" href="tel:+1-646-226-5381" rel="noopener noreferrer">646 226 5381</a>
@@ -39,7 +39,7 @@ class App extends React.Component{
 					<span>=</span>
 					<NavigationList Id="" handleClick={this.handleClick}/>
 				</div>
-			</nav>
+			</header>
 			<main>
 				<NavigationList Id="desktop-nav" handleClick={this.handleClick}/>
 				<ChooseContent content={this.state.currentContent}/>
@@ -161,7 +161,9 @@ function ChooseContent(props){
 function Startup(){
 	return (
 		<div id="startup">
-			<h1>Hi there! I'm Matthew Lee.<br/><br/>Choose a section to get started.</h1>
+			<h1>Hi there! I'm Matthew Lee.</h1>
+			<img src="images/Professional_Photo_ML_Circle.png"/>
+			<h2>Choose a section to get started.</h2>
 		</div>
 	);
 }
@@ -196,7 +198,7 @@ class About extends React.Component{
 				<Banner banner="nav-1.jpg" alt="About Me"/>
 				<div className="about-row">
 				<AboutSection 
-					image="images/Linkedin.jpg"
+					image="images/Matthew_Lee.png"
 					alt="Matt Lee, that's me"
 					text="Hi, my name is Matthew Lee. I've recently graduated from Binghamton University and am now back in New York City. Through clear, simple designs and pixel perfect work, I want to take my web development skills to the next level." />
 				<AboutSection 
