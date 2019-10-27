@@ -1,18 +1,13 @@
 #resume{
 	text-align: center;
-	display: flex;
-	flex-direction: column;
 	flex-grow: 1;
-	border: 5px solid green;
 }
 
 #resume embed {
 	height: 100%;
 	width: 100%;
-	flex: 1 1 auto;
 }
 
-@media screen and (max-width: 775px) {
-	#resume {margin-top: 110px; height: 100%;justify-content: flex-end;}
-	#resume embed {}
+@media screen and (max-width: 1000px) {
+	#resume {margin-top: 110px; height: 70vh;}
 }
