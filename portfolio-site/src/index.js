@@ -162,7 +162,7 @@ function Startup(){
 	return (
 		<div id="startup">
 			<h1>Hi there! I'm Matthew Lee.</h1>
-			<img src="images/Professional_Photo_ML_Circle.png"/>
+			<img src="images/Professional_Photo_ML_Circle.png" alt="Matthew Lee"/>
 			<h2>Choose a section to get started.</h2>
 		</div>
 	);
@@ -208,11 +208,11 @@ class About extends React.Component{
 				</div>
 				<div className="about-row">
 				<AboutSection 
-					image="images/Plant.png"
+					image="images/Plant.jpg"
 					alt="Hobbies"
 					text="I try to spread out my free time between hobbies. I'll create graphics, go hiking, watch the latest movie, or maybe play games. Doing these activities has helped me gain a strong appreciation for the arts and the process of creating large-scale projects."/>
 				<AboutSection 
-					image="images/Elli.png"
+					image="images/Elli.jpg"
 					alt="My Cat Ellie"
 					text="This is my cat, Ellie! She's 3 years old and her interests include sunbathing, sitting in boxes, eating chicken, and chasing laser-pointers. She also enjoys the occassional catnip. &quot;Meow meow? Meow. Meow meow meow!&quot;"/>
 				</div>
@@ -270,7 +270,7 @@ class Portfolio extends React.Component{
 				<h3>- Websites -</h3>
 				<div className="card-wrapper">
 					<WebsiteCard 
-						image="images/Tip-Calculator-sbs.png"
+						image="images/Tip-Calculator-sbs.jpg"
 						alt="Tip Calculator"
 						title="Tip Calculator (2019)"
 						text="In an attempt to get more familiar with HTML, CSS, and forms, I developed a tip calculator. It evens includes a dark mode!"
@@ -282,7 +282,7 @@ class Portfolio extends React.Component{
 						text="This clock allows you to check the time from multiple locations. It utilizes a weather API to allow the user to check the weather for the respective location."
 						github="https://github.com/mlee138/Matts-World-Clock"/>
 					<WebsiteCard 
-						image="images/portfolio-website2.png"
+						image="images/portfolio-website2.jpg"
 						alt="Portfolio Website"
 						title="Portfolio Website (2019)"
 						text="It's this website you're looking at!"
@@ -341,13 +341,13 @@ class Contact extends React.Component{
 			<div id="contact">
 				<Banner banner="nav-4.jpg" alt="Contact"/>
 				<a className="green" href="tel:+1-646-226-5381" rel="noopener noreferrer">
-					<img src="images/phone.png" alt="click to call"/>
+					<img src="images/phone.jpg" alt="click to call"/>
 					<p>Phone: <span>(646)226-5381</span></p></a>
 				<a className="red" href="mailto:mlee2197@gmail.com" rel="noopener noreferrer">
-					<img src="images/email.png" alt="send email"/>
+					<img src="images/email.jpg" alt="send email"/>
 					<p>Email: <span>mlee2197@gmail.com</span></p></a>
 				<a className="blue" href="https://www.linkedin.com/in/matthewlee1297/" target="_blank" rel="noopener noreferrer">
-					<img src="images/Linkedin_Logo.png" alt="Linkedin Profile"/>
+					<img src="images/Linkedin_Logo.jpg" alt="Linkedin Profile"/>
 					<p><span>View profile</span></p></a>
 			</div>
 		);
