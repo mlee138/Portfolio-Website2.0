@@ -9,3 +9,10 @@
 	width: 300px;
 	height: 300px;
 }
+
+#startup p {
+	position: absolute;
+	top: 5px;
+	left: 70px;
+	z-index: 2;
+}

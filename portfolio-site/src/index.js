@@ -161,8 +161,8 @@ function Startup(){
 	return (
 		<div id="startup">
 			<h1>Hi there! I'm Matthew Lee.</h1>
-			<img src="images/Professional_Photo_ML_Circle.png" alt="Matthew Lee"/>
 			<h2>Choose a section to get started.</h2>
+			<p>&larr; that's me!</p>
 		</div>
 	);
 }
@@ -197,11 +197,11 @@ class About extends React.Component{
 				<Banner banner="nav-1.jpg" alt="About Me"/>
 				<div className="about-row">
 				<AboutSection 
-					image="images/Matthew_Lee.png"
+					image="images/Elli.jpg"
 					alt="Matt Lee, that's me"
 					text="Hi, my name is Matthew Lee. I've recently graduated from Binghamton University and am now back in New York City. Through clear, simple designs and pixel perfect work, I want to take my web development skills to the next level." />
 				<AboutSection 
-					image="images/apparel_1.png"
+					image="images/apparel_1.jpg"
 					alt="Skills"
 					text=" Languages I am knowledgeable in includes HTML, CSS, JavaScript, and Java. I also have some experience with React, jQuery, Python, PHP, and SQL. Other skills include responsive design, Git, teamwork, and time management."/>
 				</div>
@@ -273,7 +273,7 @@ class Portfolio extends React.Component{
 						text="In an attempt to get more familiar with HTML, CSS, and forms, I developed a tip calculator. It evens includes a dark mode!"
 						github="https://github.com/mlee138/Tip-Calculator"/>
 					<WebsiteCard 
-						image="images/matt-world-clock.png"
+						image="images/matt-world-clock.jpg"
 						alt="World Clock"
 						title="Matt's World Clock (2019)"
 						text="This clock allows you to check the time from multiple locations. It utilizes a weather API to allow the user to check the weather for the respective location."
@@ -291,22 +291,22 @@ class Portfolio extends React.Component{
 				<h2>- Photoshop/Illustrator -</h2>
 				<div className="card-wrapper">
 					<GraphicCard 
-						image="images/Tastebuds_Spring_GIM.png"
+						image="images/Tastebuds_Spring_GIM.jpg"
 						alt="Cooking Club graphic"
 						title="Cooking Club Poster(2017)"
 						text="I designed this poster to bolster advertisement for my club, &quot;Tastebuds'&quot;, general interest meeting."/>
 					<GraphicCard 
-						image="images/FINAL_Spring_UltimatePR_2019_V2.png"
+						image="images/FINAL_Spring_UltimatePR_2019_V2.jpg"
 						alt="Power Ranking graphic"
 						title="Power Ranking (2018)"
 						text="Every semester, players compete in tournaments to see who is the best 'Smash Bros. Ultimate' player. This graphic helps illustrate the achievements of those players."/>
 					<GraphicCard 
-						image="images/apparel_1.png"
+						image="images/apparel_1.jpg"
 						alt="Club Apparel Design"
 						title="Club Apparel Design (2018)"
 						text="To help advertise our club, 'Video Game Association,' I made the design for a custom hoodie."/>
 					<GraphicCard 
-						image="images/gill-fighting.png"
+						image="images/gill-fighting.jpg"
 						alt="Anti-fish-fighting"
 						title="Anti-fish-fighting (2019)"
 						text="As a parody of 'Finding Nemo' this graphic depicts the fish character 'Gill' with a different and potentially darker backstory and a campaign to stop &quot;fish fighting.&quot;"/>
