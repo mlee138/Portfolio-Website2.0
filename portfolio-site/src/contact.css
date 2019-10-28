@@ -1,48 +1,39 @@
 #contact{
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	align-items: center;
 	margin: 0 auto;
-	width: 100%;
 }
 
-#contact a{
+#contact-container{
+	display: flex;
+	justify-content: center;
+	margin: 20px;
+}
+
+#contact-container a{
 	text-align: center;
 	color: white;
-	margin: 0 20px 20px 20px;
+	margin: 20px;
 	text-decoration: none;
 }
 
-#contact a:hover{
+#contact-container a:hover{
 	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
 }
 
-#contact a:active {
+#contact-container a:active {
 	-webkit-filter: brightness(110%);
 	filter: brightness(110%);
 }
 
-#contact a span {
+#contact-container a span {
 	text-decoration: underline;
 }
 
-#contact a img {
+#contact-container a img {
 	max-width: 12vw;
-		padding: 50px;
-}
-
-@media screen and (max-width: 1000px ){
-	#contact { margin-top: 31vh; }
-	#contact a {min-width: 25%;}
-}
-
-@media screen and (max-width: 775px) {
-	#contact {
-		flex-direction: column;
-		margin-top: 130px;
-	}
-	#contact a { width:300px; }
-	#contact a img { width: 100px; padding:10px; padding-top:30px; }
+	padding: 50px;
 }
 
 .green {
@@ -55,4 +46,15 @@
 
 .blue{
 	background-color: rgb(1, 122, 179);
+}
+
+@media screen and (max-width: 1000px ){
+	#contact{display: block; margin:0;}
+	#contact-container a {width: 25%;}
+}
+
+@media screen and (max-width: 775px) {
+	#contact-container { flex-direction: column; align-items: center;}
+	#contact-container a { width:300px;}
+	#contact-container a img { width: 100px; padding:10px; padding-top:30px; }
 }

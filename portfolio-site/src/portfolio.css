@@ -98,7 +98,3 @@ h2 {
 	text-align: center;
 	color: #d4d4d4;
 }
-
-@media screen and (max-width: 1000px){
-	#portfolio {padding-top: 110px;}
-}

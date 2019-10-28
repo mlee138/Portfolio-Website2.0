@@ -1,4 +1,10 @@
-#desktop-nav{
+#start-btn{
+	border: none;
+	outline: none;
+	display: none;
+}
+
+#navigation{
 	display: flex;
 	flex-direction: column;
 	position: sticky;
@@ -11,11 +17,11 @@
 	box-sizing: border-box;
 }
 
-#desktop-nav li {
+#navigation li {
 	width: 100%;
 }
 
-#desktop-nav button {
+#navigation button {
 	background: none;
 	height: 12vh;
 	width: 250px;
@@ -97,7 +103,7 @@ li button img:active {
 		position: fixed;
 		z-index: 2;
 	}
-	#desktop-nav { 
+	#navigation { 
 		display: none;
 		position: fixed;
 		right:0px;
@@ -106,6 +112,6 @@ li button img:active {
 		margin: 0;
 
 	}
-	#desktop-nav:hover{	display: block; }
+	#navigation:hover{	display: block; }
 	#dropdown-btn {display: inline-block;}
 }

@@ -3,16 +3,33 @@
 	margin: 0 auto;
 	margin-top: 70px;
 	color: #ccc;
+	font-family: 'Staatliches', cursive;
 }
 
-#startup img {
-	width: 300px;
-	height: 300px;
+#startup h1{
+	font-size: 4em;
+	letter-spacing: 5px;
+	margin-bottom:0;
 }
 
-#startup p {
-	position: absolute;
-	top: 5px;
-	left: 70px;
-	z-index: 2;
+#startup h1 span{
+	color: lightblue;
+}
+
+#startup h2 {
+	font-size: 1em;
+	margin-top:0;
+	letter-spacing: 2px;
+}
+
+#startup label{
+	border: 2px solid white;
+	padding: 7px;
+	border-radius: 30px;
+	cursor: pointer;
+}
+
+#startup label:active{
+	background-color: #d2d2d2;
+	color: black;
 }

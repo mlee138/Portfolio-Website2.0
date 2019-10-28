@@ -16,13 +16,11 @@ class App extends React.Component{
 		this.state = {
 			currentContent: "start"
 		};
-
 		this.handleClick = this.handleClick.bind(this);
 	}
 
 	handleClick(a) {
-		var newState = {};
-		newState["currentContent"] = a;
+		var newState = {currentContent:a};
 		this.setState(newState);
 	}
 
@@ -30,14 +28,14 @@ class App extends React.Component{
 		return(
 		<div>
 			<header id="header">
-				<a id="icon" href="https://www.linkedin.com/in/matthewlee1297/" target="_blank" rel="noopener noreferrer"><img src="face-icon.png" alt="Matt Lee Face Icon" /></a>
+				<label id="icon" for="start-btn"><img src="face-icon.png" alt="Matt Lee Face Icon" /></label>
 				<div id="contact-info">
 					<a id="phone" href="tel:+1-646-226-5381" rel="noopener noreferrer">646 226 5381</a>
 					<a id="email" href="mailto:mlee2197@gmail.com" rel="noopener noreferrer">mlee2197@gmail.com</a>
 				</div>
 			</header>
 			<main>
-				<Navigation Id="desktop-nav" handleClick={this.handleClick}/>
+				<Navigation Id="navigation" handleClick={this.handleClick}/>
 				<ChooseContent content={this.state.currentContent}/>
 			</main>
 		</div>
@@ -50,10 +48,10 @@ class Navigation extends React.Component{
 		super(props);
 
 		this.state = {
-			about: false,
-			portfolio: false,
-			resume: false,
-			contact: false,
+			about: "",
+			portfolio: "",
+			resume: "",
+			contact: "",
 			selected: ""
 		};
 
@@ -61,9 +59,7 @@ class Navigation extends React.Component{
 	}
 
 	handleClickData(data){
-		var updateState = {};
-
-		updateState[data] = true;
+		var updateState = {[data]:"color"};
 		this.setState(updateState);
 
 		updateState["selected"] = data;
@@ -72,26 +68,13 @@ class Navigation extends React.Component{
 		this.props.handleClick(data);
 	}
 
-	render(){
-		var content = {
-			colorAbout: "",
-			colorPortfolio:"",
-			colorResume:"",
-			colorContact:""
-		};
-			
-		(this.state.about ? content["colorAbout"]='color' : content["colorAbout"]='');
-		(this.state.portfolio ? content["colorPortfolio"]='color' : content["colorPortfolio"]='');
-		(this.state.resume ? content["colorResume"]='color' : content["colorResume"]='');
-		(this.state.contact ? content["colorContact"]='color' : content["colorContact"]='');
-		
+	render(){		
 		var selected = {
 			about: '',
 			portfolio:'',
 			resume: '',
 			contact: ''
 		};
-
 		switch(this.state.selected){
 			case 'about':
 				selected["about"] = 'nav-selected';
@@ -111,27 +94,32 @@ class Navigation extends React.Component{
 
 		return(
 			<nav>
+				<button 
+					id="start-btn"
+					onClick={this.handleClickData.bind(this, "start")}>
+				</button>
 				<button id="dropdown-btn">=</button>					
 				<ul id={this.props.Id}>
 					<li id={selected["about"]}>
 						<button	
+							id="about-btn"
 							onClick={this.handleClickData.bind(this, "about")}>
-							<img className={content["colorAbout"]}  src="images/Banner-1.jpg" alt="About me" />
+							<img className={this.state.about}  src="images/Banner-1.jpg" alt="About me" />
 						</button></li>
 					<li id={selected["portfolio"]}>
 						<button
 							onClick={this.handleClickData.bind(this, "portfolio")}>
-							<img className={content["colorPortfolio"]} src="images/Banner-2.jpg" alt="Portfolio" />
+							<img className={this.state.portfolio} src="images/Banner-2.jpg" alt="Portfolio" />
 						</button></li>
 					<li id={selected["resume"]}>
 						<button
 							onClick={this.handleClickData.bind(this, "resume")}>
-							<img className={content["colorResume"]} src="images/Banner-3.jpg" alt="Resume" />
+							<img className={this.state.resume} src="images/Banner-3.jpg" alt="Resume" />
 						</button></li>
 					<li id={selected["contact"]}>
 						<button
 							onClick={this.handleClickData.bind(this, "contact")}>
-							<img className={content["colorContact"]} src="images/Banner-4.jpg" alt="Contact" />
+							<img className={this.state.contact} src="images/Banner-4.jpg" alt="Contact" />
 						</button></li>
 				</ul>
 			</nav>
@@ -154,31 +142,18 @@ function ChooseContent(props){
 			return <Startup/>;
 	}
 }
-
 // ===========================================
-
 function Startup(){
 	return (
 		<div id="startup">
-			<h1>Hi there! I'm Matthew Lee.</h1>
-			<h2>Choose a section to get started.</h2>
-			<p>&larr; that's me!</p>
+			<h1><span>Matthew</span> Lee</h1>
+			<h2>Jr. Front-End Developer</h2>
+			<br/>
+			<label name="get started" for="about-btn">Get Started</label>
 		</div>
 	);
 }
-
-//============================================
-
-function Banner(props){
-	return(
-		<div id="banner-container">
-			<img src={props.banner} alt={props.alt}/>
-		</div>
-	);
-}
-
 // ===========================================
-
 function AboutSection(props){
 	return(
 		<section className="about-section">
@@ -194,7 +169,7 @@ class About extends React.Component{
 	render(){
 		return( 
 			<div id="about">
-				<Banner banner="nav-1.jpg" alt="About Me"/>
+				<h2 className="banner">About Me</h2>
 				<div className="about-row">
 				<AboutSection 
 					image="images/Elli.jpg"
@@ -219,9 +194,7 @@ class About extends React.Component{
 		);
 	}
 }
-
 // ===========================================
-
 function WebsiteCard(props){
 	return (
 		<div className="card">
@@ -263,7 +236,7 @@ class Portfolio extends React.Component{
 	render(){
 		return(
 			<div id="portfolio">
-				<Banner banner="nav-2.jpg" alt="Portfolio"/>
+				<h2 className="banner">Portfolio</h2>
 				<h2>- Websites -</h2>
 				<div className="card-wrapper">
 					<WebsiteCard 
@@ -316,36 +289,34 @@ class Portfolio extends React.Component{
 		);
 	}
 }
-
 // ===========================================
-
 class Resume extends React.Component{
 	render(){
 		return(
 			<div id="resume">
-				<Banner banner="nav-3.jpg" alt="Resume"/>
+				<h2 className="banner">Resume</h2>
 		    	<embed src="images/Matthew_Lee_Resume_Fall_2019.pdf"/>
 			</div>
 		);
 	}
 }
-
 // ===========================================
-
 class Contact extends React.Component{
 	render(){
 		return(
 			<div id="contact">
-				<Banner banner="nav-4.jpg" alt="Contact"/>
-				<a className="green" href="tel:+1-646-226-5381" rel="noopener noreferrer">
-					<img src="images/phone.jpg" alt="click to call"/>
-					<p>Phone: <span>(646)226-5381</span></p></a>
-				<a className="red" href="mailto:mlee2197@gmail.com" rel="noopener noreferrer">
-					<img src="images/email.jpg" alt="send email"/>
-					<p>Email: <span>mlee2197@gmail.com</span></p></a>
-				<a className="blue" href="https://www.linkedin.com/in/matthewlee1297/" target="_blank" rel="noopener noreferrer">
-					<img src="images/Linkedin_Logo.jpg" alt="Linkedin Profile"/>
-					<p><span>View profile</span></p></a>
+				<h2 className="banner">Contact</h2>
+				<div id="contact-container">
+					<a className="green" href="tel:+1-646-226-5381" rel="noopener noreferrer">
+						<img src="images/phone.jpg" alt="click to call"/>
+						<p>Phone: <span>(646)226-5381</span></p></a>
+					<a className="red" href="mailto:mlee2197@gmail.com" rel="noopener noreferrer">
+						<img src="images/email.jpg" alt="send email"/>
+						<p>Email: <span>mlee2197@gmail.com</span></p></a>
+					<a className="blue" href="https://www.linkedin.com/in/matthewlee1297/" target="_blank" rel="noopener noreferrer">
+						<img src="images/Linkedin_Logo.jpg" alt="Linkedin Profile"/>
+						<p><span>View profile</span></p></a>
+				</div>
 			</div>
 		);
 	}

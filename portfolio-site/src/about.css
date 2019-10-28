@@ -17,7 +17,7 @@
 }
 
 @media screen and (max-width: 1000px) {
-	#about{ padding: 0px; padding-top: 110px;}
+	#about{ padding: 0px;}
 	.about-row { flex-direction: column; }
 	.about-section { 
 		width: 90%; 
