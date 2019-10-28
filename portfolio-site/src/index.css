@@ -6,49 +6,37 @@ body {
 }
 
 header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	position: sticky;
 	top: 0px;
 	height: 70px;
 	background-color: #202020;
-	text-align: center;
-	z-index: 1;
+	z-index: 2;
 }
 
 #icon {
-	position: relative;
-	float:left;
-	top: 10px;
-	left: 10px;
+	padding: 10px;
+	height: 50px;
 	cursor: default;
 }
 
-#icon #face-logo{
-	position: relative;
-	height: 50px;
-	border: 3px solid #dfdfdf;
-	border-radius: 50%;
-	box-sizing: border-box;
-}
-
-#contact-info {
-	position: absolute;
-	top: 23px;
-	right: 30px;
+#icon img{
+	height: 100%;
 }
 
 #contact-info a{
 	color: white;
 	text-decoration: none;
 	letter-spacing: 2px;
+	font-size: 0.9em;
+	margin-right: 20px;
 }
 
 #contact-info a:hover{
 	border-bottom: 2px solid white;
 }
-
-#contact-info a:first-child{
-	margin-right: 50px;
-} 
 
 main {
 	margin: 0;
@@ -58,5 +46,6 @@ main {
 }
 
 @media screen and (max-width: 1000px){
+	#contact-info{ display:none; }
 	main{ flex-direction: column; }
 }

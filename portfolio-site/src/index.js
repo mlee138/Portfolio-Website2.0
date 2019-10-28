@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css'
-import './navigation-list.css'
+import './navigation.css'
 import './startup.css'
 import './about.css'
 import './portfolio.css'
@@ -30,18 +30,14 @@ class App extends React.Component{
 		return(
 		<div>
 			<header id="header">
-				<a id="icon" href="https://www.linkedin.com/in/matthewlee1297/" target="_blank" rel="noopener noreferrer"><img id="face-logo" src="Matt_Lee_Icon.ico" alt="Matt Lee Face Icon" /></a>
+				<a id="icon" href="https://www.linkedin.com/in/matthewlee1297/" target="_blank" rel="noopener noreferrer"><img src="face-icon.png" alt="Matt Lee Face Icon" /></a>
 				<div id="contact-info">
 					<a id="phone" href="tel:+1-646-226-5381" rel="noopener noreferrer">646 226 5381</a>
 					<a id="email" href="mailto:mlee2197@gmail.com" rel="noopener noreferrer">mlee2197@gmail.com</a>
 				</div>
-				<div id="dropdown">
-					<span>=</span>
-					<NavigationList Id="" handleClick={this.handleClick}/>
-				</div>
 			</header>
 			<main>
-				<NavigationList Id="desktop-nav" handleClick={this.handleClick}/>
+				<Navigation Id="desktop-nav" handleClick={this.handleClick}/>
 				<ChooseContent content={this.state.currentContent}/>
 			</main>
 		</div>
@@ -49,7 +45,7 @@ class App extends React.Component{
 	}
 }
 
-class NavigationList extends React.Component{
+class Navigation extends React.Component{
 	constructor(props){
 		super(props);
 
@@ -114,28 +110,31 @@ class NavigationList extends React.Component{
 		}
 
 		return(
-			<ul id={this.props.Id}>
-				<li id={selected["about"]}>
-					<button	
-						onClick={this.handleClickData.bind(this, "about")}>
-						<img className={content["colorAbout"]}  src="images/Banner-1.png" alt="About me" />
-					</button></li>
-				<li id={selected["portfolio"]}>
-					<button
-						onClick={this.handleClickData.bind(this, "portfolio")}>
-						<img className={content["colorPortfolio"]} src="images/Banner-2.png" alt="Portfolio" />
-					</button></li>
-				<li id={selected["resume"]}>
-					<button
-						onClick={this.handleClickData.bind(this, "resume")}>
-						<img className={content["colorResume"]} src="images/Banner-3.png" alt="Resume" />
-					</button></li>
-				<li id={selected["contact"]}>
-					<button
-						onClick={this.handleClickData.bind(this, "contact")}>
-						<img className={content["colorContact"]} src="images/Banner-4.png" alt="Contact" />
-					</button></li>
-			</ul>
+			<nav>
+				<button id="dropdown-btn">=</button>					
+				<ul id={this.props.Id}>
+					<li id={selected["about"]}>
+						<button	
+							onClick={this.handleClickData.bind(this, "about")}>
+							<img className={content["colorAbout"]}  src="images/Banner-1.jpg" alt="About me" />
+						</button></li>
+					<li id={selected["portfolio"]}>
+						<button
+							onClick={this.handleClickData.bind(this, "portfolio")}>
+							<img className={content["colorPortfolio"]} src="images/Banner-2.jpg" alt="Portfolio" />
+						</button></li>
+					<li id={selected["resume"]}>
+						<button
+							onClick={this.handleClickData.bind(this, "resume")}>
+							<img className={content["colorResume"]} src="images/Banner-3.jpg" alt="Resume" />
+						</button></li>
+					<li id={selected["contact"]}>
+						<button
+							onClick={this.handleClickData.bind(this, "contact")}>
+							<img className={content["colorContact"]} src="images/Banner-4.jpg" alt="Contact" />
+						</button></li>
+				</ul>
+			</nav>
 		);
 	}
 }
@@ -229,7 +228,6 @@ function WebsiteCard(props){
 			<div className="image-container">
 				<img src={props.image} alt={props.alt}/>
 			</div>
-			<hr/>
 			<div className="card-text">
 				<h4>{props.title}</h4>
 				<p>{props.text}</p>
@@ -245,7 +243,6 @@ function GraphicCard(props){
 			<div className="image-container">
 				<img src={props.image} alt={props.alt}/>
 			</div>
-			<hr/>
 			<div className="card-text">
 				<h4>{props.title}</h4>
 				<p>{props.text}</p>
@@ -267,7 +264,7 @@ class Portfolio extends React.Component{
 		return(
 			<div id="portfolio">
 				<Banner banner="nav-2.jpg" alt="Portfolio"/>
-				<h3>- Websites -</h3>
+				<h2>- Websites -</h2>
 				<div className="card-wrapper">
 					<WebsiteCard 
 						image="images/Tip-Calculator-sbs.jpg"
@@ -291,7 +288,7 @@ class Portfolio extends React.Component{
 				</div>
 				<hr />
 
-				<h3>- Photoshop/Illustrator -</h3>
+				<h2>- Photoshop/Illustrator -</h2>
 				<div className="card-wrapper">
 					<GraphicCard 
 						image="images/Tastebuds_Spring_GIM.png"
