@@ -28,7 +28,7 @@ class App extends React.Component{
 		return(
 		<div>
 			<header id="header">
-				<label id="icon" for="start-btn"><img src="face-icon.png" alt="Matt Lee Face Icon" /></label>
+				<label id="icon" htmlFor="start-btn"><img src="face-icon.png" alt="Matt Lee Face Icon" /></label>
 				<div id="contact-info">
 					<a id="phone" href="tel:+1-646-226-5381" rel="noopener noreferrer">646 226 5381</a>
 					<a id="email" href="mailto:mlee2197@gmail.com" rel="noopener noreferrer">mlee2197@gmail.com</a>
@@ -149,7 +149,7 @@ function Startup(){
 			<h1><span>Matthew</span> Lee</h1>
 			<h2>Jr. Front-End Developer</h2>
 			<br/>
-			<label name="get started" for="about-btn">Get Started</label>
+			<label name="get started" htmlFor="about-btn">Get Started</label>
 		</div>
 	);
 }
@@ -170,25 +170,16 @@ class About extends React.Component{
 		return( 
 			<div id="about">
 				<h2 className="banner">About Me</h2>
+				<p>I am a Jr. Front-End Developer, based in New York City, who is in love with designing and programming websites.</p>
 				<div className="about-row">
-				<AboutSection 
-					image="images/Elli.jpg"
-					alt="Matt Lee, that's me"
-					text="Hi, my name is Matthew Lee. I've recently graduated from Binghamton University and am now back in New York City. Through clear, simple designs and pixel perfect work, I want to take my web development skills to the next level." />
-				<AboutSection 
-					image="images/apparel_1.jpg"
-					alt="Skills"
-					text=" Languages I am knowledgeable in includes HTML, CSS, JavaScript, and Java. I also have some experience with React, jQuery, Python, PHP, and SQL. Other skills include responsive design, Git, teamwork, and time management."/>
-				</div>
-				<div className="about-row">
-				<AboutSection 
-					image="images/Plant.jpg"
-					alt="Hobbies"
-					text="I try to spread out my free time between hobbies. I'll create graphics, go hiking, watch the latest movie, or maybe play games. Doing these activities has helped me gain a strong appreciation for the arts and the process of creating large-scale projects."/>
-				<AboutSection 
-					image="images/Elli.jpg"
-					alt="My Cat Ellie"
-					text="This is my cat, Ellie! She's 3 years old and her interests include sunbathing, sitting in boxes, eating chicken, and chasing laser-pointers. She also enjoys the occassional catnip. &quot;Meow meow? Meow. Meow meow meow!&quot;"/>
+					<AboutSection 
+						image="images/skills.jpg"
+						alt="Skills"
+						text="Skills: HTML, CSS, JavaScript, Java, jQuery, React, responsive design, Git, teamwork, and time management"/>
+					<AboutSection 
+						image="images/Ellie.jpg"
+						alt="My Cat Ellie"
+						text="This is my cat, Ellie! She's 3 years old and her interests include sunbathing, sitting in boxes, eating chicken, and chasing laser-pointers. She also enjoys the occassional catnip. &quot;Meow meow? Meow. Meow meow meow!&quot;"/>
 				</div>
 			</div>
 		);
