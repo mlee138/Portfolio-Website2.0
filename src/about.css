@@ -29,10 +29,11 @@
 }
 
 @media screen and (max-width: 775px) {
-	#about{ padding: 0px;}
+	#about{ padding: 0px; margin-bottom: 25px;}
+	#about > p { width: 70%; }
 	.about-row { flex-direction: column; }
 	.about-section { 
-		width: 60%; 
+		width: 75%; 
 		height: 35vh;
 		margin: 0 auto;
 		margin-top: 15px;
