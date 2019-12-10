@@ -44,20 +44,26 @@ class Portfolio extends React.Component{
 		return(
 			<div id="portfolio">
 				<h2 className="banner">Portfolio</h2>
-				<h2>- Websites -</h2>
+				<h2>- Websites/Apps -</h2>
 				<div className="card-wrapper">
 					<WebsiteCard 
-						image="images/Tip-Calculator-sbs.jpg"
-						alt="Tip Calculator"
-						title="Tip Calculator (2019)"
-						text="In an attempt to get more familiar with HTML, CSS, and forms, I developed a tip calculator. It evens includes a dark mode!"
-						github="https://github.com/mlee138/Tip-Calculator"/>
+						image="images/fridgid.jpg"
+						alt="FridgId"
+						title="FridgId (2019)"
+						text="Using React Native alongside JavaScript and CSS, I'm developing an app to allow users to create a shopping list, track items bought and placed into their fridge, and search recipes based on their items. Development is not complete."
+						github="https://github.com/mlee138/fridgid"/>
 					<WebsiteCard 
 						image="images/matt-world-clock.jpg"
 						alt="World Clock"
 						title="Matt's World Clock (2019)"
 						text="This clock allows you to check the time from multiple locations. It utilizes a weather API to allow the user to check the weather for the respective location."
 						github="https://github.com/mlee138/Matts-World-Clock"/>
+					<WebsiteCard 
+						image="images/Tip-Calculator-sbs.jpg"
+						alt="Tip Calculator"
+						title="Tip Calculator (2019)"
+						text="In an attempt to get more familiar with HTML, CSS, and forms, I developed a tip calculator. It evens includes a dark mode!"
+						github="https://github.com/mlee138/Tip-Calculator"/>
 					<WebsiteCard 
 						image="images/portfolio-website2.jpg"
 						alt="Portfolio Website"
