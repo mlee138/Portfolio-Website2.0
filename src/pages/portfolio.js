@@ -1,6 +1,6 @@
 import React from 'react';
-import './portfolio.css'
-import './banner.css';
+import './stylesheets/portfolio.css'
+import './stylesheets/banner.css';
 
 function WebsiteCard(props){
 	return (

@@ -1,6 +1,6 @@
 import React from 'react';
-import './resume.css';
-import './banner.css';
+import './stylesheets/resume.css';
+import './stylesheets/banner.css';
 
 class Resume extends React.Component{
 	render(){

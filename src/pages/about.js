@@ -1,6 +1,6 @@
 import React from 'react';
-import './about.css';
-import './banner.css';
+import './stylesheets/about.css';
+import './stylesheets/banner.css';
 
 function AboutSection(props){
 	return(
@@ -11,6 +11,10 @@ function AboutSection(props){
 			</div>
 		</section>
 	);
+}
+
+function AboutSlide(props){
+
 }
 
 class About extends React.Component{

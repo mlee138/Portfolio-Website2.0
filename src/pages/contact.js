@@ -1,6 +1,6 @@
 import React from 'react';
-import './contact.css';
-import './banner.css';
+import './stylesheets/contact.css';
+import './stylesheets/banner.css';
 
 class Contact extends React.Component{
 	render(){

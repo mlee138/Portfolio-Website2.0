@@ -1,5 +1,5 @@
 import React from 'react';
-import './startup.css'
+import './stylesheets/startup.css'
 
 function Startup(){
 	return (
