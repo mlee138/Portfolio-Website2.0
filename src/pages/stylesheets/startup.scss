@@ -1,0 +1,56 @@
+#startup{
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 70px;
+	color: #ccc;
+    font-family: 'Staatliches', cursive;
+
+    img {
+        border: 5px solid white;
+    }
+    h1{
+        font-size: 4em;
+        letter-spacing: 5px;
+        margin-top:0;
+        margin-bottom:0;
+        span { color: lightblue; }
+    }
+    h2 {
+        font-size: 1em;
+        margin-top:0;
+        letter-spacing: 2px;
+    }
+    label {
+        background-color: white;
+        color: black;
+        padding: 10px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: 0.5s;
+        &:active {
+            background-color: #d2d2d2;
+            color: black;
+        }
+        &:hover {
+            span { 
+                padding-right: 15px; 
+                &::after {
+                    opacity: 1;
+                    right: 0;
+                }
+            }
+        }
+        span {
+            position: relative;
+            transition: 0.5s;
+            &::after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+        }
+    }
+}

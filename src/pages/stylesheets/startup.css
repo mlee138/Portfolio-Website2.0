@@ -1,65 +1,69 @@
-#startup{
-	text-align: center;
-	margin: 0 auto;
-	margin-top: 70px;
-	color: #ccc;
-	font-family: 'Staatliches', cursive;
+#startup {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 70px;
+  color: #ccc;
+  font-family: 'Staatliches', cursive;
 }
 
-#startup img{
-	border: 5px solid white;
+#startup img {
+  border: 5px solid white;
 }
 
-#startup h1{
-	font-size: 4em;
-	letter-spacing: 5px;
-	margin-top:0;
-	margin-bottom:0;
+#startup h1 {
+  font-size: 4em;
+  letter-spacing: 5px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-#startup h1 span{
-	color: lightblue;
+#startup h1 span {
+  color: lightblue;
 }
 
 #startup h2 {
-	font-size: 1em;
-	margin-top:0;
-	letter-spacing: 2px;
+  font-size: 1em;
+  margin-top: 0;
+  letter-spacing: 2px;
 }
 
-#startup label{
-	background-color: white;
-	color: black;
-	padding: 10px;
-	border-radius: 30px;
-	cursor: pointer;
-	transition: 0.5s;
+#startup label {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-#startup label span{
-	position: relative;
-	transition: 0.5s;
+#startup label:active {
+  background-color: #d2d2d2;
+  color: black;
 }
 
-#startup label span::after{
-	content: '\00bb';
-	position: absolute;
-	opacity: 0;
-	top: 0;
-	right: -20px;
-	transition: 0.5s;
+#startup label:hover span {
+  padding-right: 15px;
 }
 
-#startup label:hover span{
-	padding-right: 15px;
+#startup label:hover span::after {
+  opacity: 1;
+  right: 0;
 }
 
-#startup label:hover span::after{
-	opacity: 1;
-	right: 0;
+#startup label span {
+  position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-#startup label:active{
-	background-color: #d2d2d2;
-	color: black;
+#startup label span::after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
+/*# sourceMappingURL=startup.css.map */

@@ -1,0 +1,75 @@
+@import 'banner';
+
+$green: rgb(1, 181, 22);
+$red: rgb(204, 42, 40);
+$blue: rgb(1, 122, 179);
+
+#contact{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+#contact-container{
+	display: flex;
+	justify-content: center;
+    margin: 20px;
+    
+    a {
+        text-align: center;
+        color: white;
+        margin: 20px;
+        text-decoration: none;
+
+        &:hover {
+            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
+        }
+
+        &:active {
+            -webkit-filter: brightness(110%);
+            filter: brightness(110%);
+        }
+
+        span {
+            text-decoration: underline;
+        }
+
+        img {
+            max-width: 12vw;
+            padding: 50px;
+        }
+    }
+}
+
+.green {
+	background-color: $green;
+}
+
+.red{
+	background-color: $red;
+}
+
+.blue{
+	background-color: $blue;
+}
+
+@media screen and (max-width: 1000px ){
+    #contact {
+        display: block;
+        margin:0;
+    }
+	#contact-container a {width: 25%;}
+}
+
+@media screen and (max-width: 775px) {
+	#contact-container { flex-direction: column; align-items: center;}
+	#contact-container a { 
+        width:300px;
+        img {
+            width: 100px;
+            padding:10px;
+            padding-top:30px;
+        }
+    }
+}

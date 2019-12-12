@@ -1,6 +1,5 @@
 import React from 'react';
 import './stylesheets/about.css';
-import './stylesheets/banner.css';
 
 function AboutSection(props){
 	return(
