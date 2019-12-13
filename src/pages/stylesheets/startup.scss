@@ -28,15 +28,14 @@
             background-color: #d2d2d2;
             color: black;
         }
-        &:hover {
-            span { 
-                padding-right: 15px; 
-                &::after {
-                    opacity: 1;
-                    right: 0;
-                }
+        &:hover span { 
+            padding-right: 15px; 
+            &::after {
+                opacity: 1;
+                right: 0;
             }
         }
+        
         span {
             position: relative;
             transition: 0.5s;
