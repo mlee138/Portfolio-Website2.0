@@ -77,7 +77,12 @@ li button img {
 	border-left: 1px solid grey;
 	outline:none;
     cursor: pointer;
-    
+    transition: 0.1s;
+    &:active {
+        
+        background-color: white;
+        color: black;
+    }
     &:focus + ul {
         display: block;
     }

@@ -84,6 +84,13 @@ li button img:active {
   border-left: 1px solid grey;
   outline: none;
   cursor: pointer;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+#dropdown-btn:active {
+  background-color: white;
+  color: black;
 }
 
 #dropdown-btn:focus + ul {
