@@ -22,7 +22,7 @@ $animation-duration: 0.6s;
 	display: flex;
 	flex-direction: row;
 	width: 90%;
-	margin: 40px;
+	margin: 0 auto;
 	box-sizing: border-box;
 	background-color:black;
 }
@@ -115,6 +115,7 @@ $animation-duration: 0.6s;
 	#labels { 
 		flex-direction: row; 
 		justify-content: space-evenly;
+		width: 100%;
 		hr {
 			display: none;
 		}

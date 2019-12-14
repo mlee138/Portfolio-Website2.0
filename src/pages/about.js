@@ -30,7 +30,7 @@ class About extends React.Component{
 			<div id="slideshow">
 				<div id="labels" className={this.state.color}>
 					<hr/>
-					<label htmlFor='intro' id="intro-label" className='btn' onClick={() => this.handleClick("color-intro")}><h2>Introduction</h2></label>
+					<label htmlFor='intro' id="intro-label" className='btn' onClick={() => this.handleClick("color-intro")}><h2>Intro</h2></label>
 					<hr/>
 					<label htmlFor='skills' id="skills-label" className='btn' onClick={() => this.handleClick("color-skills")}><h2>Skills</h2></label>
 					<hr/>

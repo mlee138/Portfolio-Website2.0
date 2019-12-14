@@ -26,6 +26,10 @@
   width: 100%;
 }
 
+#resume a {
+  margin: 5px;
+}
+
 @media screen and (max-width: 1000px) {
   #resume {
     height: 70vh;
