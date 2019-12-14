@@ -19,11 +19,11 @@ header {
 #icon {
 	padding: 10px;
 	height: 50px;
-	cursor: default;
-}
-
-#icon img{
-	height: 100%;
+    cursor: default;
+    
+    img{
+        height: 100%;
+    }
 }
 
 #contact-info a{
@@ -31,11 +31,11 @@ header {
 	text-decoration: none;
 	letter-spacing: 2px;
 	font-size: 0.9em;
-	margin-right: 20px;
-}
-
-#contact-info a:hover{
-	border-bottom: 2px solid white;
+    margin-right: 20px;
+    
+    &:hover {
+        border-bottom: 2px solid white;
+    }
 }
 
 main {

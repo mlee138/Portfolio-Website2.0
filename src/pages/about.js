@@ -74,7 +74,7 @@ class About extends React.Component{
 					header="My Cat"
 					image="../images/Ellie.jpg"
 					alt="Ellie Cat"
-					text="This is my cat, Ellie! She's 3 years old and her interests include sunbathing, sitting in boxes, eating chicken, and chasing laser-pointers. She also enjoys the occassional catnip."
+					text="This is my cat, Ellie! She's 3 years old and her interests include sunbathing, sitting in boxes, eating chicken, and chasing laser-pointers. She also enjoys the occasional catnip."
 					extraText="&quot;Meow meow? Meow. Meow meow meow!&quot;"/>
 				</div>
 			</div>

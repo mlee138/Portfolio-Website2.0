@@ -1,0 +1,126 @@
+#start-btn {
+  border: none;
+  outline: none;
+  display: none;
+}
+
+#navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 70px;
+  margin: 0;
+  padding: 0 0.5vw 0 0.5vw;
+  height: 90vh;
+  list-style: none;
+  background-color: #0e0e0e;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#navigation li {
+  width: 100%;
+}
+
+#navigation button {
+  background: none;
+  height: 12vh;
+  width: 250px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+li button img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  -webkit-transition: 800ms ease-out;
+  transition: 800ms ease-out;
+  opacity: 0.8;
+}
+
+li button img:hover {
+  opacity: 1;
+  -webkit-transition: 200ms ease-out;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+li button img:active {
+  -webkit-filter: grayscale(0);
+  -webkit-filter: brightness(110%);
+  filter: grayscale(0);
+  filter: brightness(110%);
+}
+
+.color {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+#dropdown-btn {
+  display: none;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  height: 70px;
+  padding: 0 30px 0 30px;
+  font-weight: bold;
+  font-size: 2em;
+  color: white;
+  z-index: 3;
+  background: none;
+  border: none;
+  border-left: 1px solid grey;
+  outline: none;
+  cursor: pointer;
+}
+
+#dropdown-btn:focus + ul {
+  display: block;
+}
+
+#nav-selected {
+  height: 49vh;
+}
+
+#nav-selected img {
+  -webkit-transition: height 0.5s ease-out;
+  transition: height 0.5s ease-out;
+}
+
+#nav-selected button img {
+  height: 48vh;
+}
+
+@media screen and (max-width: 1000px) {
+  nav {
+    position: fixed;
+    z-index: 2;
+  }
+  #navigation {
+    display: none;
+    position: fixed;
+    right: 0px;
+    top: 70px;
+    padding: 0;
+    margin: 0;
+  }
+  #navigation:hover {
+    display: block;
+  }
+  #dropdown-btn {
+    display: inline-block;
+  }
+}
+/*# sourceMappingURL=navigation.css.map */

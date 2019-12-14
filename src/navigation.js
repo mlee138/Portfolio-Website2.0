@@ -1,5 +1,5 @@
 import React from 'react';
-import './navigation.css';
+import './stylesheets/navigation.css';
 
 class Navigation extends React.Component{
 	constructor(props){

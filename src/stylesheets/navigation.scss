@@ -14,20 +14,19 @@
 	height: 90vh;
 	list-style: none;
 	background-color: #0e0e0e;
-	box-sizing: border-box;
-}
-
-#navigation li {
-	width: 100%;
-}
-
-#navigation button {
-	background: none;
-	height: 12vh;
-	width: 250px;
-	cursor: pointer;
-	border: none;
-	outline: none;
+    box-sizing: border-box;
+    
+    li{
+        width: 100%;
+    }
+    button{
+        background: none;
+        height: 12vh;
+        width: 250px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+    }
 }
 
 li button img {
@@ -38,24 +37,23 @@ li button img {
 	filter: grayscale(1);
 	-webkit-transition: 800ms ease-out;
 	transition: 800ms ease-out;
-	opacity: 0.8;
-}
-
-li button img:hover {
-	opacity: 1;
+    opacity: 0.8;
+    
+    &:hover {
+        opacity: 1;
 	
-	-webkit-transition: 200ms ease-out;
-	-moz-transition: 200ms ease-out;
-	-o-transition: 200ms ease-out;
-	-ms-transition: 200ms ease-out;
-	transition: 200ms;
-}
-
-li button img:active {
-	-webkit-filter: grayscale(0);
-	-webkit-filter: brightness(110%);
-	filter: grayscale(0);
-	filter: brightness(110%);
+        -webkit-transition: 200ms ease-out;
+        -moz-transition: 200ms ease-out;
+        -o-transition: 200ms ease-out;
+        -ms-transition: 200ms ease-out;
+        transition: 200ms;
+    }
+    &:active {
+        -webkit-filter: grayscale(0);
+        -webkit-filter: brightness(110%);
+        filter: grayscale(0);
+        filter: brightness(110%);
+    }
 }
 
 .color {
@@ -78,24 +76,24 @@ li button img:active {
 	border: none;
 	border-left: 1px solid grey;
 	outline:none;
-	cursor: pointer;
-}
-
-#dropdown-btn:focus + ul {
-    display: block;	
+    cursor: pointer;
+    
+    &:focus + ul {
+        display: block;
+    }
 }
 
 #nav-selected{
-	height: 49vh;
-}
+    height: 49vh;
 
-#nav-selected button img{
-	height: 48vh;
-}
-
-#nav-selected img {
-	-webkit-transition: height 0.5s ease-out;
-	transition: height 0.5s ease-out;
+    img {
+        -webkit-transition: height 0.5s ease-out;
+        transition: height 0.5s ease-out;
+    }
+    
+    button img {
+        height: 48vh;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -109,9 +107,9 @@ li button img:active {
 		right:0px;
 		top:70px;
 		padding: 0;
-		margin: 0;
-
+        margin: 0;
+        
+        &:hover { display: block; }
 	}
-	#navigation:hover{	display: block; }
 	#dropdown-btn {display: inline-block;}
 }
