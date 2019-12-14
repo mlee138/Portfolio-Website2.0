@@ -29,7 +29,8 @@ class About extends React.Component{
 		return( 
 			<div id="slideshow">
 				<div id="labels" className={this.state.color}>
-					<label htmlFor='intro' id="intro-label" className='btn' onClick={() => this.handleClick("color-intro")}><h2>Intro</h2></label>
+					<hr/>
+					<label htmlFor='intro' id="intro-label" className='btn' onClick={() => this.handleClick("color-intro")}><h2>Introduction</h2></label>
 					<hr/>
 					<label htmlFor='skills' id="skills-label" className='btn' onClick={() => this.handleClick("color-skills")}><h2>Skills</h2></label>
 					<hr/>
@@ -39,7 +40,7 @@ class About extends React.Component{
 				<div>
 				<input id='intro' className='rad' name='rad' type='radio'/>
 				<AboutSlide
-					header="Intro"
+					header="Introduction"
 					image="../images/self.jpg"
 					alt="Matt Lee"
 					text="I am a Jr. Front-End Developer and a recent Binghamton University graduate. I'm based in New York City, and love with designing and building websites."/>

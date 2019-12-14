@@ -45,6 +45,7 @@ class Portfolio extends React.Component{
 		return(
 			<div id="portfolio">
 				<h2 className="banner">Portfolio</h2>
+				<h4>Hover/tap images to enlarge</h4>
 				<h2>Websites / Apps</h2>
 				<div className="card-wrapper">
 					<WebsiteCard 

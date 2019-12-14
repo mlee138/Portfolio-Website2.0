@@ -8,7 +8,19 @@
     }
     h2{
         text-transform: uppercase;
-        word-spacing: 12px;
+        word-spacing: 5px;
+        letter-spacing: 1px;
+        font-family: 'Staatliches', cursive;
+        font-size: 2em;
+    }
+    & > h4{
+        text-align: center;
+        color: white;
+        opacity: 0.4;
+        transition: 0.3s;
+        &:hover {
+            opacity: 0.9;
+        }
     }
 }
 
@@ -56,6 +68,11 @@ $gradient-angle: 170deg;
         animation-name: unclip;
         animation-duration: 0.3s; 
         clip-path: none;
+
+        img {
+            transition-delay: 0.3s;
+            transform: translateY(-50px);
+        }
     }
 
     img {

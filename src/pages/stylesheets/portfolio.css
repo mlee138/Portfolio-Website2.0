@@ -22,7 +22,22 @@
 
 #portfolio h2 {
   text-transform: uppercase;
-  word-spacing: 12px;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+  font-family: 'Staatliches', cursive;
+  font-size: 2em;
+}
+
+#portfolio > h4 {
+  text-align: center;
+  color: white;
+  opacity: 0.4;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#portfolio > h4:hover {
+  opacity: 0.9;
 }
 
 .card-wrapper {
@@ -82,6 +97,13 @@
           animation-duration: 0.3s;
   -webkit-clip-path: none;
           clip-path: none;
+}
+
+.image-container:hover img {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
 }
 
 .image-container img {
