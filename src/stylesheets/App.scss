@@ -36,16 +36,15 @@ header {
 	
 	span::after {
 		content: "";
-		border: 1.2px solid white;
+		border: 0px solid white;
 		position: absolute;
 		left: 0;
 		bottom: -4px;
-		opacity: 0;
 		width: 0%;
-		transition: all 0.3s ease-in-out;
+		transition: width 0.3s ease-in-out;
 		
 	}
-	&:hover span::after { opacity: 1; width: 96%; }
+	&:hover span::after { border-width:1.3px; width: 98%; }
 }
 
 main {

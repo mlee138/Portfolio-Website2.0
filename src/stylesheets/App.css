@@ -44,19 +44,18 @@ header {
 
 #contact-info a span::after {
   content: "";
-  border: 1.2px solid white;
+  border: 0px solid white;
   position: absolute;
   left: 0;
   bottom: -4px;
-  opacity: 0;
   width: 0%;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
 }
 
 #contact-info a:hover span::after {
-  opacity: 1;
-  width: 96%;
+  border-width: 1.3px;
+  width: 98%;
 }
 
 main {
