@@ -35,18 +35,17 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 20px;
 }
 
 #contact-container a {
   text-align: center;
+  width: 300px;
   color: white;
   margin: 20px;
-  text-decoration: none;
   -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
 }
 
 #contact-container a:hover {
@@ -56,18 +55,85 @@
           box-shadow: 10px 10px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
+#contact-container a:hover #phone {
+  transform-box: fill-box;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: shake 0.13s;
+          animation: shake 0.13s;
+  -webkit-animation-delay: 0.175s;
+          animation-delay: 0.175s;
+  -webkit-animation-iteration-count: 5;
+          animation-iteration-count: 5;
+}
+
+#contact-container a:hover #email-top {
+  transform-box: fill-box;
+  -webkit-transform-origin: 50% 53.5%;
+          transform-origin: 50% 53.5%;
+  -webkit-animation: open-email 0.5s;
+          animation: open-email 0.5s;
+  -webkit-animation-delay: 0.175s;
+          animation-delay: 0.175s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 #contact-container a:active {
   -webkit-filter: brightness(110%);
   filter: brightness(110%);
 }
 
-#contact-container a span {
-  text-decoration: underline;
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(3deg);
+            transform: rotateZ(3deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(-3deg);
+            transform: rotateZ(-3deg);
+  }
 }
 
-#contact-container a img {
-  max-width: 12vw;
-  padding: 50px;
+@keyframes shake {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(3deg);
+            transform: rotateZ(3deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(-3deg);
+            transform: rotateZ(-3deg);
+  }
+}
+
+@-webkit-keyframes open-email {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+}
+
+@keyframes open-email {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
 }
 
 .green {
@@ -87,9 +153,6 @@
     display: block;
     margin: 0;
   }
-  #contact-container a {
-    width: 25%;
-  }
 }
 
 @media screen and (max-width: 775px) {
@@ -101,14 +164,6 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  #contact-container a {
-    width: 300px;
-  }
-  #contact-container a img {
-    width: 100px;
-    padding: 10px;
-    padding-top: 30px;
   }
 }
 /*# sourceMappingURL=contact.css.map */

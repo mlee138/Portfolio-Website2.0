@@ -28,8 +28,8 @@ class App extends React.Component{
 			<header id="header">
 				<label id="icon" htmlFor="start-btn"><img src="images/face-icon.png" alt="Matt Lee Face Icon" /></label>
 				<div id="contact-info">
-					<a id="phone" href="tel:+1-646-226-5381" rel="noopener noreferrer">646 226 5381</a>
-					<a id="email" href="mailto:mlee2197@gmail.com" rel="noopener noreferrer">mlee2197@gmail.com</a>
+					<a id="phone" href="tel:+1-646-226-5381" rel="noopener noreferrer"><span>646 226 5381</span></a>
+					<a id="email" href="mailto:mlee2197@gmail.com" rel="noopener noreferrer"><span>mlee2197@gmail.com</span></a>
 				</div>
 			</header>
 			<main>

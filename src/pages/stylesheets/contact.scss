@@ -1,5 +1,6 @@
 @import 'banner';
 
+$delay: 0.175s;
 $green: rgb(1, 181, 22);
 $red: rgb(204, 42, 40);
 $blue: rgb(1, 122, 179);
@@ -14,64 +15,64 @@ $blue: rgb(1, 122, 179);
 #contact-container{
 	display: flex;
 	justify-content: center;
-    margin: 20px;
     
     a {
         text-align: center;
+        width:300px;
         color: white;
         margin: 20px;
-        text-decoration: none;
         box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.3);
-        transition: all 0.5s;
+        transition: all 0.35s;
         &:hover {
             transform: translate(-5px, -5px);
             box-shadow: 10px 10px 5px 3px rgba(0,0,0,0.3);
+
+            #phone {
+                transform-box: fill-box;
+                transform-origin: center;
+                animation: shake 0.13s;
+                animation-delay: $delay;
+                animation-iteration-count: 5;
+            }
+
+            #email-top{
+                transform-box: fill-box;
+                transform-origin: 50% 53.5%;
+                animation: open-email 0.5s;
+                animation-delay: $delay;
+                animation-fill-mode: forwards;
+            }
         }
 
         &:active {
             -webkit-filter: brightness(110%);
             filter: brightness(110%);
         }
-
-        span {
-            text-decoration: underline;
-        }
-
-        img {
-            max-width: 12vw;
-            padding: 50px;
-        }
     }
 }
 
-.green {
-	background-color: $green;
+@keyframes shake {
+    0% { transform: rotateZ(0deg); }
+    50% { transform: rotateZ(3deg); }
+    100% { transform: rotateZ(-3deg); }
 }
 
-.red{
-	background-color: $red;
+@keyframes open-email {
+    0% { transform: rotateX(0deg); }
+    100% { transform: rotateX(180deg); }
 }
 
-.blue{
-	background-color: $blue;
-}
+.green { background-color: $green; }
+.red{ background-color: $red; }
+.blue{ background-color: $blue; }
 
 @media screen and (max-width: 1000px ){
     #contact {
         display: block;
         margin:0;
     }
-	#contact-container a {width: 25%;}
 }
 
 @media screen and (max-width: 775px) {
 	#contact-container { flex-direction: column; align-items: center;}
-	#contact-container a { 
-        width:300px;
-        img {
-            width: 100px;
-            padding:10px;
-            padding-top:30px;
-        }
-    }
 }

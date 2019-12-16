@@ -26,7 +26,7 @@ header {
 #icon {
   padding: 10px;
   height: 50px;
-  cursor: default;
+  cursor: pointer;
 }
 
 #icon img {
@@ -34,6 +34,7 @@ header {
 }
 
 #contact-info a {
+  position: relative;
   color: white;
   text-decoration: none;
   letter-spacing: 2px;
@@ -41,8 +42,21 @@ header {
   margin-right: 20px;
 }
 
-#contact-info a:hover {
-  border-bottom: 2px solid white;
+#contact-info a span::after {
+  content: "";
+  border: 1.2px solid white;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  opacity: 0;
+  width: 0%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#contact-info a:hover span::after {
+  opacity: 1;
+  width: 96%;
 }
 
 main {
