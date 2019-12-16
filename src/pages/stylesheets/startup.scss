@@ -1,4 +1,4 @@
-$delay: 0.5s;
+$delay: 0.4s;
 
 @mixin animate {
     opacity: 0;
@@ -23,28 +23,21 @@ $delay: 0.5s;
             font-size: 4em;
             font-weight: bold;
             letter-spacing: 3px;
-            animation-name: textAnimation;
-            animation-duration: 2s;
+            animation-name: nameAnimation;
+            animation-duration: 1.9s;
             animation-delay: $delay;
             animation-timing-function: ease-in-out;
             animation-fill-mode: forwards;
         }
     }    
 
-    h1{
-        font-size: 4em;
-        letter-spacing: 5px;
-        margin-top:0;
-        margin-bottom:0;
-        span { color: lightblue; }
-    }
     h2 {
         font-size: 1em;
         margin-top:0;
         letter-spacing: 2px;
 
         @include animate;
-        animation-delay: $delay*4;
+        animation-delay: $delay*5;
     }
     label {
         background-color: white;
@@ -98,7 +91,7 @@ $delay: 0.5s;
     }
 }
 
-@keyframes textAnimation {
+@keyframes nameAnimation {
     0%{
         stroke-dasharray: 0,100;
         fill: #333;
