@@ -41,6 +41,8 @@ function MoreToCome(){
 }
 
 class Portfolio extends React.Component{
+
+
 	render(){
 		return(
 			<div id="portfolio">
@@ -48,6 +50,13 @@ class Portfolio extends React.Component{
 				<h4>Hover/tap images to enlarge</h4>
 				<h2>Websites / Apps</h2>
 				<div className="card-wrapper">
+					<WebsiteCard 
+						picOrientation="wide"
+						image="images/reminder_extension.png"
+						alt="reminder extension"
+						title="Quick Reminder Chrome Extension (2019)"
+						text="Using the module pattern, I'm developing a reminder extension that allows the user to quickly add self-reminders and quickly view the reminders for the day"
+						github="https://github.com/mlee138/Reminder-Chrome-Extension"/>
 					<WebsiteCard 
 						picOrientation="long"
 						image="images/fridgid.jpg"

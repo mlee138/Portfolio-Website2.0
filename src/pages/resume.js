@@ -3,11 +3,12 @@ import './stylesheets/resume.css';
 
 class Resume extends React.Component{
 	render(){
+		const resume = "images/Matthew_Lee_Resume_2020.pdf";
 		return(
 			<div id="resume">
 				<h2 className="banner">Resume</h2>
-		    	<embed src="images/Matthew_Lee_Resume_Fall_2019.pdf"/>
-				<a href="images/Matthew_Lee_Resume_Fall_2019.pdf" download>Click to Download</a>
+		    	<embed src={resume} />
+				<a href={resume} download>Click to Download</a>
 			</div>
 		);
 	}
