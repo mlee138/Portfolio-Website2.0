@@ -1,6 +1,5 @@
 import React from 'react';
 import './stylesheets/App.css'
-import Startup from './pages/startup'
 import About from './pages/about';
 import Portfolio from './pages/portfolio'
 import Resume from './pages/resume'
