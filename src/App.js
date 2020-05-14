@@ -82,7 +82,7 @@ function ChooseContent(props){
 		case "contact":
 			return <Contact/>;
 		default:
-			return <Startup/>;
+			return <About/>;
 	}
 }
 
