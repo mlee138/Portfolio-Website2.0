@@ -1,24 +1,39 @@
 .banner {
-  display: none;
-  background-color: #d4d4d4;
+  display: inline-block;
+  position: relative;
   font-family: 'Staatliches', cursive;
   font-size: 3em;
-  color: #333;
+  color: teal;
   margin: 0;
   padding: 15px;
 }
 
-@media screen and (max-width: 1000px) {
-  .banner {
-    display: block;
-  }
+.banner::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 50%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  height: 0px;
+  width: 100%;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  right: -100%;
+  top: 50%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  height: 0px;
+  width: 100%;
 }
 
 #resume {
   text-align: center;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  width: 100vw;
+  height: 100vh;
 }
 
 #resume embed {
@@ -28,6 +43,7 @@
 
 #resume a {
   margin: 5px;
+  color: cyan;
 }
 
 @media screen and (max-width: 1000px) {

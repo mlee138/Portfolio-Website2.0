@@ -1,12 +1,17 @@
 @import 'banner';
 
 #portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     & > hr{
     	margin: 0px 20px 0px 20px;
     	border-radius: 50%; 
         border-color:#696969;
     }
-    h2{
+    h3 {
         text-transform: uppercase;
         word-spacing: 5px;
         letter-spacing: 1px;
@@ -30,7 +35,8 @@
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	flex-direction: row;
+    flex-direction: row;
+    width: 70%;
 }
 
 $color-angle: 35%;
@@ -53,6 +59,14 @@ $gradient-angle: 170deg;
     
     &:hover {
         z-index: 1;
+    }
+
+}
+
+@for $i from 1 through 11 {
+    .card:nth-child(#{$i}n) {
+        animation: fadeUp #{$i * 0.5}s ease-in-out forwards;
+        
     }
 }
 
@@ -95,6 +109,17 @@ $gradient-angle: 170deg;
     width: 200px;
     &:hover {
         width: 270px;
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
     }
 }
 

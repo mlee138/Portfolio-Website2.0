@@ -1,8 +1,12 @@
+@font-face {
+  font-family: Staatliches;
+  src: url("../fonts/Staatliches-Regular.ttf");
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
-  background-color: #333333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header {
@@ -19,43 +23,52 @@ header {
   position: sticky;
   top: 0px;
   height: 70px;
-  background-color: #202020;
-  z-index: 2;
+  padding: 0 40px;
+  background-color: white;
+  border-bottom: 1px solid lightgrey;
+  z-index: 100;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 
-#icon {
-  padding: 10px;
-  height: 50px;
+#title {
+  text-align: left;
+}
+
+#title h3 {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+#title h4 {
+  margin: 0;
+  padding: 0;
+  color: grey;
+}
+
+#nav {
+  list-style-type: none;
+}
+
+#nav > li {
+  display: inline;
+  margin-left: 30px;
+  padding: 5px;
   cursor: pointer;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.10s ease-in-out;
+  transition: opacity 0.10s ease-in-out;
 }
 
-#icon img {
-  height: 100%;
-}
-
-#contact-info a {
-  position: relative;
-  color: white;
+#nav > li a {
+  color: black;
   text-decoration: none;
-  letter-spacing: 2px;
-  font-size: 0.9em;
-  margin-right: 20px;
 }
 
-#contact-info a span::after {
-  content: "";
-  border: 0px solid white;
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0%;
-  -webkit-transition: width 0.3s ease-in-out;
-  transition: width 0.3s ease-in-out;
-}
-
-#contact-info a:hover span::after {
-  border-width: 1.3px;
-  width: 98%;
+#nav > li:hover {
+  border-bottom: 2px solid black;
+  opacity: 1;
 }
 
 main {
@@ -64,10 +77,14 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+}
+
+footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  margin-top: 90px;
 }
 
 @media screen and (max-width: 1000px) {

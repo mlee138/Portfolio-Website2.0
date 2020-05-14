@@ -5,7 +5,7 @@ function WebsiteCard(props){
 	return (
 		<div className="card">
 			<div className="image-container">
-				<img class={props.picOrientation}src={props.image} alt={props.alt}/>
+				<img className={props.picOrientation}src={props.image} alt={props.alt}/>
 			</div>
 			<div className="card-text">
 				<h4>{props.title}</h4>
@@ -22,7 +22,7 @@ function GraphicCard(props){
 	return (
 		<div className="card">
 			<div className="image-container">
-				<img class={props.picOrientation} src={props.image} alt={props.alt}/>
+				<img className={props.picOrientation} src={props.image} alt={props.alt}/>
 			</div>
 			<div className="card-text">
 				<h4>{props.title}</h4>
@@ -47,15 +47,14 @@ class Portfolio extends React.Component{
 		return(
 			<div id="portfolio">
 				<h2 className="banner">Portfolio</h2>
-				<h4>Hover/tap images to enlarge</h4>
-				<h2>Websites / Apps</h2>
+				<h3>Websites / Apps</h3>
 				<div className="card-wrapper">
 					<WebsiteCard 
 						picOrientation="wide"
 						image="images/reminder_extension.png"
 						alt="reminder extension"
 						title="Quick Reminder Chrome Extension (2019)"
-						text="Using the module pattern, I'm developing a reminder extension that allows the user to quickly add self-reminders and quickly view the reminders for the day"
+						text="By implementing a module pattern, I'm developing a reminder extension that allows the user to quickly add self-reminders and quickly view the reminders for the day"
 						github="https://github.com/mlee138/Reminder-Chrome-Extension"/>
 					<WebsiteCard 
 						picOrientation="long"
@@ -89,7 +88,7 @@ class Portfolio extends React.Component{
 				</div>
 				<hr />
 
-				<h2>Photoshop / Illustrator</h2>
+				<h3>Photoshop / Illustrator</h3>
 				<div className="card-wrapper">
 					<GraphicCard 
 						picOrientation="long"

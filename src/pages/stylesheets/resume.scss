@@ -1,14 +1,16 @@
 @import 'banner';
 
 #resume{
-	text-align: center;
-    flex-grow: 1;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
     embed {
         height: 100%;
         width: 100%;
     }
     a {
         margin: 5px;
+        color: cyan;
     }
 }
 

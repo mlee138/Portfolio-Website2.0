@@ -1,13 +1,31 @@
 .banner {
-	display: none;
-	background-color: #d4d4d4;
+	display: inline-block;
+	position: relative;
 	font-family: 'Staatliches', cursive;
 	font-size: 3em;
-	color: #333;
+	color: teal;
 	margin: 0;
 	padding: 15px;
-}
 
-@media screen and (max-width: 1000px){
-	.banner { display: block;} 
+	&::before {
+		content: "";
+		position: absolute;
+		left: -100%;
+		top: 50%;
+		border: 2px solid #ccc;
+		border-radius: 10px;
+		height:0px;
+		width: 100%;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		right: -100%;
+		top: 50%;
+		border: 2px solid #ccc;
+		border-radius: 10px;
+		height:0px;
+		width: 100%;
+	}
 }

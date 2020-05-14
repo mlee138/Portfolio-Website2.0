@@ -1,17 +1,33 @@
 .banner {
-  display: none;
-  background-color: #d4d4d4;
+  display: inline-block;
+  position: relative;
   font-family: 'Staatliches', cursive;
   font-size: 3em;
-  color: #333;
+  color: teal;
   margin: 0;
   padding: 15px;
 }
 
-@media screen and (max-width: 1000px) {
-  .banner {
-    display: block;
-  }
+.banner::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 50%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  height: 0px;
+  width: 100%;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  right: -100%;
+  top: 50%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  height: 0px;
+  width: 100%;
 }
 
 #contact {
@@ -25,7 +41,10 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
 }
 
 #contact-container {
@@ -39,13 +58,17 @@
 
 #contact-container a {
   text-align: center;
-  width: 300px;
   color: white;
   margin: 20px;
   -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
+  text-decoration: none;
+}
+
+#contact-container a p {
+  margin: 0 0 10px 0;
 }
 
 #contact-container a:hover {
@@ -146,13 +169,6 @@
 
 .blue {
   background-color: #017ab3;
-}
-
-@media screen and (max-width: 1000px) {
-  #contact {
-    display: block;
-    margin: 0;
-  }
 }
 
 @media screen and (max-width: 775px) {
