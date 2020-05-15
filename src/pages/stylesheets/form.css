@@ -78,9 +78,11 @@ form textarea {
 }
 
 .btn-submit {
+  border: none;
   border-radius: 5px;
   background-color: #007aff;
   color: white;
+  margin: 0 10px 10px 10px;
   padding: 10px;
   -webkit-transition: background-color 0.175s;
   transition: background-color 0.175s;
@@ -88,6 +90,39 @@ form textarea {
 
 .btn-submit:hover {
   background-color: #0062ca;
+}
+
+.btn-submit .loader {
+  display: inline-block;
+  border-radius: 50%;
+  border: 3px solid grey;
+  border-left: 3px solid white;
+  width: 10px;
+  height: 10px;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 @media screen and (max-width: 775px) {

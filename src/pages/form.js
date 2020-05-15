@@ -11,10 +11,13 @@ class Form extends React.Component {
 			message: '',
             error: 'no-error',
             submitMessage: '',
+            btnText: 'Send',
+            btnClass: ''
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.sendMessage = this.sendMessage.bind(this);
+        this.changeButton = this.changeButton.bind(this);
     }
 
     handleChange = (type, event) => {
@@ -29,7 +32,20 @@ class Form extends React.Component {
         }
     }
 
-    handleSubmit = () => {
+    changeButton = () => {
+        if(this.state.btnText) {
+            console.log("change to loader");
+            this.setState({btnText: ''});
+            this.setState({btnClass: 'loader'});
+        } else {
+            console.log("change to send");
+            this.setState({btnText: 'Send'});
+            this.setState({btnClass: ''});
+        }
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
         if(this.state.name && this.state.message && this.state.email && this.state.subject){
             const templateId = 'contact_email';
             this.sendMessage(templateId, {message_html: this.state.message, user_name:this.state.name, user_email:this.state.email, subject_html:this.state.subject});
@@ -41,6 +57,7 @@ class Form extends React.Component {
     }
 
     sendMessage = (templateId, variables) => {
+        this.changeButton();
         window.emailjs.send(
             'gmail', templateId,
             variables
@@ -52,8 +69,11 @@ class Form extends React.Component {
             this.setState({ email: ''});
             this.setState({ error: 'email-sent' });
             this.setState({ submitMessage: 'Email sent successfully!' });
-        }).catch(err => console.error('Error sending email:', err));
-        
+            this.changeButton();
+        }).catch(err => {
+            console.error('Error sending email:', err)
+            this.changeButton();
+        });
     }
 
     render() {
@@ -94,7 +114,7 @@ class Form extends React.Component {
                         required
                         value={this.state.message}/>
                 
-                <input type="button" value="Send" className="btn-submit" onClick={this.handleSubmit}/>
+        <button className="btn-submit" onClick={(e) => this.handleSubmit(e)}><span className={this.state.btnClass}>{this.state.btnText}</span></button>
             </form>
             </div>
         );
