@@ -25,15 +25,10 @@ header {
 
 #title {
 	text-align: left;
-	h3{
+	h3, h4{
 		margin: 0;
 		padding: 0;
-		text-align: left;
-	}
-	h4 {
-		margin: 0;
-		padding: 0;
-		color: grey;
+		font-weight: normal;
 	}
 }
 
