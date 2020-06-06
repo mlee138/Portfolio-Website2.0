@@ -48,10 +48,7 @@ class App extends React.Component{
 		return(
 		<div>
 			<header id="header">
-				<div id="title">
-					<h3>Matt Lee</h3>
-					<h4>Jr. Web Developer</h4>
-					</div>
+				<img id="logo" src="../images/MattLee_Logo.svg" alt="Matt Lee Design"/> 
 				<ul id="nav">
 					<li onClick={this.handleClick.bind(this, 'about')}><a className="nav-btn" href="#about">About</a></li>
 					<li onClick={this.handleClick.bind(this, 'portfolio')}><a className="nav-btn" href="#portfolio">Portfolio</a></li>
