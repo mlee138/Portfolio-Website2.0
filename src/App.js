@@ -10,7 +10,7 @@ class App extends React.Component{
 		super(props);
 
 		this.state = {
-			currentContent: "contact"
+			currentContent: "about"
 		};
 		this.handleClick = this.handleClick.bind(this);
 	}
@@ -39,7 +39,7 @@ class App extends React.Component{
 		}
 		var navButtons = document.getElementsByClassName('nav-btn');
 		for(var i=0; i<navButtons.length; i++){
-			(i === navNumber ? navButtons[i].style.color = "#df0744" : navButtons[i].style.color = "black");
+			(i === navNumber ? navButtons[i].style.color = "#7bceff" : navButtons[i].style.color = "white");
 		}
 	}
 
