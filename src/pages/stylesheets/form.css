@@ -23,34 +23,40 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50%;
+  width: 600px;
+}
+
+form label {
+  margin: 10px;
+  margin-right: 10px;
 }
 
 form input, form textarea {
   padding: 10px;
-  margin: 10px;
+  margin-top: 5px;
   border-radius: 3px;
-  border: none;
-  background-color: lightgray;
+  border: 2px solid lightgrey;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+}
+
+form textarea {
+  height: 100px;
 }
 
 form .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
-form .row input {
+form .row label {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-}
-
-form textarea {
-  height: 100px;
 }
 
 .no-error {

@@ -14,22 +14,31 @@ class Form extends React.Component {
             btnText: 'Send',
             btnClass: ''
         };
+        this.focusCheck = this.focusCheck.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.sendMessage = this.sendMessage.bind(this);
         this.changeButton = this.changeButton.bind(this);
     }
 
+    focusCheck = (event) => {
+        let target = event.target;
+        (target.value ? target.style.borderBottom = "3px solid rgb(0, 162, 255)" : target.style.borderBottom = "3px solid red");
+    }
+
     handleChange = (type, event) => {
+        let target = event.target;
         if(type === 'name'){
-            this.setState({ name: event.target.value});
+            this.setState({ name: target.value});
         } else if(type === 'email') {
-            this.setState({ email: event.target.value});
+            this.setState({ email: target.value});
         } else if(type === 'subject') {
-            this.setState({ subject: event.target.value});
+            this.setState({ subject: target.value});
         } else if(type === 'message') {
-            this.setState({ message: event.target.value});
+            this.setState({ message: target.value});
         }
+        
+        (target.value ? target.style.borderBottom = "3px solid rgb(0, 162, 255)" : target.style.borderBottom = "3px solid red");
     }
 
     changeButton = () => {
@@ -50,6 +59,15 @@ class Form extends React.Component {
             const templateId = 'contact_email';
             this.sendMessage(templateId, {message_html: this.state.message, user_name:this.state.name, user_email:this.state.email, subject_html:this.state.subject});
         } else {
+            let inputs = document.getElementsByTagName("input");
+            let textarea = document.getElementById("email-text");
+
+            for(var i=0; i<inputs.length; i++){
+                if(!inputs[i].value){ inputs[i].style.borderBottom = "3px solid red"; }
+            }
+
+            if(!textarea.value){ textarea.style.borderBottom = "3px solid red"; }
+
             console.log ("Not every input filled");
             this.setState({ error: 'error-found' });
             this.setState({ submitMessage: "Please fill out all fields." })
@@ -84,35 +102,56 @@ class Form extends React.Component {
                 <p className={this.state.error}>{this.state.submitMessage}</p>
                 <input type="hidden" name="contact_number"/>
                     <div className="row">
-                        <input 
-                            name="name-input"
-                            type='text'  
-                            onChange={(e) => this.handleChange('name', e)} 
-                            value={this.state.name}
-                            placeholder="Name"
-                            required/>
-                        <input 
-                            name="email-input"
-                            type='text'  
-                            onChange={(e) => this.handleChange('email', e)} 
-                            value={this.state.email}
-                            placeholder="Email"
-                            required/>
+                        <label>
+                            <span>Name</span>
+                            <br/>
+                            <input
+                                id="name" 
+                                name="name-input"
+                                type='text'  
+                                onChange={(e) => this.handleChange('name', e)} 
+                                onFocus={(e) => this.focusCheck(e)}
+                                value={this.state.name}
+                                placeholder="John Smith"
+                                required/>
+                                    </label>
+                         <label>
+                            <span>Email</span>
+                            <br/>
+                            <input 
+                                id="email"
+                                name="email-input"
+                                type='email'  
+                                onChange={(e) => this.handleChange('email', e)} 
+                                onFocus={(e) => this.focusCheck(e)}
+                                value={this.state.email}
+                                placeholder="JohnSmith@email.com"
+                                required/>
+                                </label>
                     </div>
-                    <input
-                        name="subject-input"
-                        type='text'  
-                        onChange={(e) => this.handleChange('subject', e)} 
-                        value={this.state.subject}
-                        placeholder="Subject"
-                        required/>
-                    <textarea
-                        id="email-text"
-                        name="text-input"
-                        onChange={(e) => this.handleChange('message', e)}
-                        placeholder="Message"
-                        required
-                        value={this.state.message}/>
+                    <label>
+                        <span>Subject</span>
+                        <br/>
+                        <input
+                            id="subject"
+                            name="subject-input"
+                            type='text'  
+                            onChange={(e) => this.handleChange('subject', e)} 
+                            onFocus={(e) => this.focusCheck(e)}
+                            value={this.state.subject}
+                            required/>
+                            </label>
+                    <label>
+                        <span>Message</span>
+                        <br/>
+                        <textarea
+                            id="email-text"
+                            name="text-input"
+                            onChange={(e) => this.handleChange('message', e)}
+                            onFocus={(e) => this.focusCheck(e)}
+                            required
+                            value={this.state.message}/>
+                            </label>
                 
         <button className="btn-submit" onClick={(e) => this.handleSubmit(e)}><span className={this.state.btnClass}>{this.state.btnText}</span></button>
             </form>
