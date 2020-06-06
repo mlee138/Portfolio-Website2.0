@@ -63,7 +63,21 @@ class App extends React.Component{
 				<ChooseContent content={this.state.currentContent}/>
 			</main>
 			<footer>
-				<p>&copy; MATTHEW LEE {year}</p>
+				<div id="contact-info">
+					<span>&copy; MATTHEW LEE {year}</span>
+					<span class="seperator">|</span>
+					<a href="tel:+1-646-226-5381" rel="noopener noreferrer">646.226.5381</a>
+					<span class="seperator">|</span>
+					<a href="mailto:mlee2197@gmail.com" rel="noopener noreferrer">mlee2197@gmail.com</a>
+					<span class="seperator">|</span>
+					<button onClick={this.handleClick.bind(this, 'contact')}>Contact</button>
+				</div>
+				<hr/>
+				<div id="social-media">
+					<a href="https://www.facebook.com/matt.lee.thats.me" class="fa fa-facebook" target="_blank"></a>
+					<a href="https://www.linkedin.com/in/matthewlee1297/" class="fa fa-linkedin" target="_blank"></a>
+					<a href="https://twitter.com/MattLeeThatsMe" class="fa fa-twitter" target="_blank"></a>
+				</div>
 			</footer>
 		</div>
 		);

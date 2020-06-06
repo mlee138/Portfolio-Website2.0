@@ -99,8 +99,8 @@
           box-sizing: border-box;
   border-radius: 5px;
   background-color: #eee;
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.4);
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
 .card:hover {
