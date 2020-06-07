@@ -37,7 +37,8 @@ class About extends React.Component{
 							<img src="/images/self.jpg" alt="Matt"/>
 							<span></span>
 						</div>
-						<div id="self-text">
+						<div id="self-content">
+							<h2><span>Who</span> am I</h2>
 							<p>I am a Jr. Front-End Developer and a recent Binghamton University graduate. I'm based in New York City, and love designing and building websites. Some of my hobbies include video games, hiking, watching movies, and coding.</p>
 							<div id="logos">
 								<span id="logos-ticker">
@@ -60,11 +61,11 @@ class About extends React.Component{
 							</div>
 						</div>
 					</section>
-					<div className="line"></div>
 					<section className="wrap-reverse">
-						<div>
-						<p id="cat-text">This is my cat, Ellie! She's 3 years old and her interests include sunbathing, sitting in boxes, eating chicken, and chasing laser-pointers. She also enjoys the occasional catnip.</p>
-						<q id="cat-quote">Meow, meow meow? Meow. Meow meow meow! -Ellie</q>
+						<div id="cat">
+							<h2>My cat <span>Ellie</span></h2>
+							<p id="cat-text">This is my cat, Ellie! She's 3 years old and her interests include sunbathing, sitting in boxes, eating chicken, and chasing laser-pointers. She also enjoys the occasional catnip.</p>
+							<q id="cat-quote">Meow, meow meow? Meow. Meow meow meow! -Ellie</q>
 						</div>
 						<div className="about-image-container">
 							<img src="/images/Ellie.jpg" alt="My Cat Ellie"/>

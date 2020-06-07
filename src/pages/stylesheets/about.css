@@ -84,7 +84,7 @@
 }
 
 #intro-container .block a:active {
-  background-color: #d2d2d2;
+  background-color: white;
   color: black;
 }
 
@@ -289,7 +289,10 @@
 }
 
 #section-container section {
-  width: 50%;
+  width: 100%;
+  padding: 60px 25%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 #section-container section img {
@@ -311,12 +314,23 @@
   opacity: 0.4;
 }
 
-#section-container section #self-text {
+#section-container section #self-content {
   padding: 50px;
   width: 80%;
 }
 
-#section-container section #self-text #logos {
+#section-container section #self-content h2 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 2em;
+  margin: 5px;
+  color: #006a9b;
+}
+
+#section-container section #self-content h2 span {
+  color: #00b6ad;
+}
+
+#section-container section #self-content #logos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -331,7 +345,7 @@
   overflow: hidden;
 }
 
-#section-container section #self-text #logos #logos-ticker, #section-container section #self-text #logos #logos-ticker2 {
+#section-container section #self-content #logos #logos-ticker, #section-container section #self-content #logos #logos-ticker2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -339,12 +353,12 @@
           animation: skillScroll 40s linear infinite;
 }
 
-#section-container section #self-text #logos #logos-ticker img, #section-container section #self-text #logos #logos-ticker2 img {
+#section-container section #self-content #logos #logos-ticker img, #section-container section #self-content #logos #logos-ticker2 img {
   height: 40px;
   width: 120px;
 }
 
-#section-container section #self-text #logos #fade {
+#section-container section #self-content #logos #fade {
   position: absolute;
   top: 0;
   left: 0;
@@ -355,15 +369,23 @@
   background: linear-gradient(90deg, white 0%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 60%, white 100%);
 }
 
-#section-container section #cat-text {
-  position: relative;
+#section-container section #cat {
+  padding: 50px;
 }
 
-#section-container section #cat-quote {
+#section-container section #cat h2 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 2em;
+  margin: 5px;
+  color: #4d00b8;
+}
+
+#section-container section #cat h2 span {
+  color: #7700ff;
+}
+
+#section-container section #cat #cat-quote {
   opacity: 0.8;
-  text-align: right;
-  position: relative;
-  right: -40px;
 }
 
 #section-container .wrap, #section-container .wrap-reverse {
@@ -375,17 +397,12 @@
           align-items: center;
 }
 
-#section-container .skills {
-  margin: 0;
-  padding: 10px;
-  -webkit-box-shadow: -2px -2px 5px inset #444, 2px 2px 5px inset #222;
-          box-shadow: -2px -2px 5px inset #444, 2px 2px 5px inset #222;
+#section-container .wrap {
+  background-color: #f8f9fb;
 }
 
-#section-container .line {
-  border-bottom: 2px solid #ccc;
-  width: 8%;
-  margin: 60px 0px;
+#section-container .wrap-reverse {
+  text-align: right;
 }
 
 @-webkit-keyframes skillScroll {
@@ -422,6 +439,7 @@
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    text-align: left;
   }
   #intro-container h1 {
     font-size: 300px;
@@ -436,8 +454,15 @@
     bottom: -20px;
     right: 0px;
   }
+  #section-container .wrap-reverse {
+    text-align: left;
+  }
   #section-container section {
-    width: 65%;
+    padding: 0 10%;
+    text-align: left;
+  }
+  #section-container section #self-content #logos {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=about.css.map */

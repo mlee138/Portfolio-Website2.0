@@ -69,7 +69,7 @@
 			cursor: pointer;
 
 			&:active {
-				background-color: #d2d2d2;
+				background-color: white;
 				color: black;
 			}
 			&:hover span { 
@@ -175,12 +175,15 @@
 	align-items: center;
 	width: 100%;
 
+
 	section:nth-child(1){
 		margin-top: 80px;
 	}
 
 	section {
-		width: 50%;
+		width: 100%;
+		padding: 60px 25%;
+		box-sizing: border-box;
 
 		img {
 			width: 200px;
@@ -200,9 +203,18 @@
 			}
 		}
 
-		#self-text {
+		#self-content {
 			padding: 50px;
 			width: 80%;
+			h2 {
+				font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+				font-size: 2em;
+				margin: 5px;
+				color: #006a9b;
+				span {
+						color: #00b6ad;
+				}
+			}
 			#logos {
 				display: flex;
 				position: relative;
@@ -232,34 +244,30 @@
 			
 
 		}
-
-		#cat-text { position: relative; }
-		#cat-quote {
-			opacity: 0.8;
-			text-align: right;
-			position: relative;
-			right: -40px;
+		
+		#cat {
+			padding: 50px;
+			h2 {
+				font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+				font-size: 2em;
+				margin: 5px;
+				color: #4d00b8;
+				span {
+						color: #7700ff;
+				}
+			}
+			#cat-quote { opacity: 0.8; }
 		}
+		
 
 	}
 	.wrap, .wrap-reverse {
 		display: flex;
 		align-items: center;
 	}
-	
-	.skills {
-		margin: 0;
-		padding: 10px;
-		box-shadow:-2px -2px 5px inset #444,
-			2px 2px 5px inset #222;	
-	}
+	.wrap { background-color: #f8f9fb;}
+	.wrap-reverse { text-align: right; }
 
-	.line {
-		border-bottom: 2px solid #ccc;
-		width: 8%;
-		margin: 60px 0px;
-
-	}	
 }
 
 @keyframes skillScroll {
@@ -274,8 +282,10 @@
 
 @media screen and (max-width: 1000px){
 	.wrap { flex-direction: column; }
-
-	.wrap-reverse { flex-direction: column-reverse; }
+	.wrap-reverse { 
+		flex-direction: column-reverse; 
+		text-align: left;
+	}
 
 	#intro-container {
 		h1 {
@@ -295,6 +305,12 @@
 	}
 
 	#section-container {
-		section { width: 65%; }
+		.wrap-reverse { text-align: left; }
+		section {
+			padding: 0 10%;
+			text-align: left;
+
+			#self-content #logos { width: 100%; }	
+		}
 	}
 }

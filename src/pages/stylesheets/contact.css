@@ -1,5 +1,5 @@
 .banner {
-  display: inline-block;
+  display: none;
   position: relative;
   font-family: 'Staatliches', cursive;
   font-size: 3em;
@@ -28,6 +28,12 @@
   border-radius: 10px;
   height: 0px;
   width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .banner {
+    display: inline-block;
+  }
 }
 
 #contact {
