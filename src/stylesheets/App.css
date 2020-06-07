@@ -4,6 +4,7 @@
 }
 
 body {
+  background-color: white;
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -35,26 +36,22 @@ header {
 
 #nav {
   list-style-type: none;
+  display: block;
 }
 
-#nav > li {
+#nav a {
   display: inline;
   margin-left: 30px;
   padding: 5px;
   cursor: pointer;
-  opacity: 0.8;
-  -webkit-transition: opacity 0.10s ease-in-out;
-  transition: opacity 0.10s ease-in-out;
-}
-
-#nav > li a {
   text-decoration: none;
   color: white;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
-#nav > li:hover {
-  border-bottom: 2px solid white;
-  opacity: 1;
+#hamburger-icon {
+  display: none;
 }
 
 main {
@@ -77,12 +74,12 @@ footer .seperator {
   margin: 0 20px;
 }
 
-footer #contact-info a {
+footer #footer-contact a {
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
 }
 
-footer #contact-info a:hover {
+footer #footer-contact a:hover {
   text-decoration: underline;
 }
 
@@ -121,14 +118,40 @@ footer #social-media a {
 }
 
 @media screen and (max-width: 1000px) {
-  #contact-info {
+  header #nav {
     display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-color: #111;
+    width: 100vw;
+    text-align: center;
+  }
+  header #nav a {
+    display: block;
+  }
+  header #hamburger-icon {
+    display: inline;
   }
   main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  #footer-contact {
+    text-align: center;
+  }
+  #footer-contact .seperator {
+    display: none;
+  }
+  #footer-contact span, #footer-contact a, #footer-contact button {
+    display: block;
+    margin: 12px auto;
   }
 }
 /*# sourceMappingURL=App.css.map */

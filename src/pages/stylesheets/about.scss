@@ -213,15 +213,12 @@
 			
 		}
 
-		#cat-text {
+		#cat-text { position: relative; }
+		#cat-quote {
+			opacity: 0.8;
+			text-align: right;
 			position: relative;
-		}
-		#cat-text::after {
-			content: '"Meow, meow meow? Meow. Meow meow meow!" -Ellie';
-			opacity: 0.75;
-			position: absolute;
-			left: 100px;
-			bottom: -40px;
+			right: -40px;
 		}
 
 	}
@@ -259,4 +256,25 @@
 	.wrap { flex-direction: column; }
 
 	.wrap-reverse { flex-direction: column-reverse; }
+
+	#intro-container {
+		h1 {
+			font-size: 300px;
+			&::before {
+				font-size: 100px;
+				top: -20px;
+				left: 0px;
+			}
+
+			&::after {
+				font-size: 100px;
+				bottom: -20px;
+				right: 0px;
+			}
+		}
+	}
+
+	#section-container {
+		section { width: 65%; }
+	}
 }

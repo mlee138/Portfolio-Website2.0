@@ -44,7 +44,10 @@ class About extends React.Component{
 					</section>
 					<div className="line"></div>
 					<section className="wrap-reverse">
+						<div>
 						<p id="cat-text">This is my cat, Ellie! She's 3 years old and her interests include sunbathing, sitting in boxes, eating chicken, and chasing laser-pointers. She also enjoys the occasional catnip.</p>
+						<q id="cat-quote">Meow, meow meow? Meow. Meow meow meow! -Ellie</q>
+						</div>
 						<div className="about-image-container">
 							<img src="/images/Ellie.jpg" alt="My Cat Ellie"/>
 							<span></span>

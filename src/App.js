@@ -10,9 +10,11 @@ class App extends React.Component{
 		super(props);
 
 		this.state = {
-			currentContent: "about"
+			currentContent: "about",
+			navDisplayed: false
 		};
 		this.handleClick = this.handleClick.bind(this);
+		this.showNav = this.showNav.bind(this);
 	}
 
 	handleClick(a) {
@@ -43,24 +45,34 @@ class App extends React.Component{
 		}
 	}
 
+	showNav = () => {
+		var x = document.getElementById("nav");
+		if (x.style.display === "block") {
+			x.style.display = "none";
+		  } else {
+			x.style.display = "block";
+		}
+	}
+
 	render(){
 		var year = (new Date()).getFullYear();
 		return(
 		<div>
 			<header id="header">
 				<img id="logo" src="../images/MattLee_Logo.svg" alt="Matt Lee Design"/> 
-				<ul id="nav">
-					<li onClick={this.handleClick.bind(this, 'about')}><a className="nav-btn" href="#about">About</a></li>
-					<li onClick={this.handleClick.bind(this, 'portfolio')}><a className="nav-btn" href="#portfolio">Portfolio</a></li>
-					<li onClick={this.handleClick.bind(this, 'resume')}><a className="nav-btn" href="#resume">Resume</a></li>
-					<li onClick={this.handleClick.bind(this, 'contact')}><a className="nav-btn" href="#contact">Contact</a></li>
-				</ul>
+				<div id="nav">
+					<a className="nav-btn" href="#about" onClick={this.handleClick.bind(this, 'about')}>About</a>
+					<a className="nav-btn" href="#portfolio"  onClick={this.handleClick.bind(this, 'portfolio')}>Portfolio</a>
+					<a className="nav-btn" href="#resume" onClick={this.handleClick.bind(this, 'resume')}>Resume</a>
+					<a className="nav-btn" href="#contact" onClick={this.handleClick.bind(this, 'contact')}>Contact</a>
+				</div>
+				<img id="hamburger-icon" src="../images/hamburger_icon.svg" alt="navigation dropdown" onClick={() => this.showNav()}/>
 			</header>
 			<main>
 				<ChooseContent content={this.state.currentContent}/>
 			</main>
 			<footer>
-				<div id="contact-info">
+				<div id="footer-contact">
 					<span>&copy; MATTHEW LEE {year}</span>
 					<span className="seperator">|</span>
 					<a href="tel:+1-646-226-5381" rel="noopener noreferrer">646.226.5381</a>

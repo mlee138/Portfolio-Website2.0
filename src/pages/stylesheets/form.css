@@ -138,5 +138,8 @@ form .row label {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  form {
+    width: 90vw;
+  }
 }
 /*# sourceMappingURL=form.css.map */
