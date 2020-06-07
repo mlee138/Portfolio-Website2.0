@@ -37,6 +37,7 @@
 }
 
 #portfolio {
+  background-color: #dde0e7;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,18 +53,45 @@
           align-items: center;
 }
 
-#portfolio > hr {
-  margin: 0px 20px 0px 20px;
-  border-radius: 50%;
-  border-color: #696969;
-}
-
 #portfolio h3 {
+  margin: 15px;
   text-transform: uppercase;
   word-spacing: 5px;
   letter-spacing: 1px;
   font-family: 'Staatliches', cursive;
   font-size: 2em;
+}
+
+#portfolio #websites-header {
+  color: #00968e;
+}
+
+#portfolio #websites-header span {
+  color: #006a9b;
+}
+
+#portfolio #websites-header span::after {
+  content: "/";
+  margin: 0 20px;
+  color: #cccccc;
+  font-style: italic;
+  font-weight: normal;
+}
+
+#portfolio #ps-header {
+  color: #4d00b8;
+}
+
+#portfolio #ps-header span {
+  color: #8000bb;
+}
+
+#portfolio #ps-header span::after {
+  content: "/";
+  margin: 0 20px;
+  color: #cccccc;
+  font-style: italic;
+  font-weight: normal;
 }
 
 #portfolio > h4 {
@@ -79,6 +107,10 @@
 }
 
 .card-wrapper {
+  margin-bottom: 80px;
+  -webkit-box-shadow: inset -3px -3px 7px #ffffffb0, inset 3px 3px 5px rgba(94, 104, 121, 0.692);
+          box-shadow: inset -3px -3px 7px #ffffffb0, inset 3px 3px 5px rgba(94, 104, 121, 0.692);
+  border-radius: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,6 +124,10 @@
       -ms-flex-direction: row;
           flex-direction: row;
   width: 70%;
+}
+
+#ps-cards .image-container {
+  background-color: #996fbb;
 }
 
 .card {
@@ -312,8 +348,8 @@
   width: 25px;
   -o-object-fit: contain;
      object-fit: contain;
+  filter: invert(100%);
   -webkit-filter: invert(100%);
-          filter: invert(100%);
 }
 
 .card-text a span {

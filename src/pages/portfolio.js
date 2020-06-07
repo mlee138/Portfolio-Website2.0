@@ -47,7 +47,7 @@ class Portfolio extends React.Component{
 		return(
 			<div id="portfolio">
 				<h2 className="banner">Portfolio</h2>
-				<h3>Websites / Apps</h3>
+				<h3 id="websites-header"><span>Websites</span>Apps</h3>
 				<div className="card-wrapper">
 					<WebsiteCard 
 						picOrientation="wide"
@@ -86,10 +86,8 @@ class Portfolio extends React.Component{
 						github="https://github.com/mlee138/Portfolio-Website2.0"/>
 					<MoreToCome/>
 				</div>
-				<hr />
-
-				<h3>Photoshop / Illustrator</h3>
-				<div className="card-wrapper">
+				<h3 id="ps-header"><span>Photoshop</span>Illustrator</h3>
+				<div id="ps-cards" className="card-wrapper">
 					<GraphicCard 
 						picOrientation="long"
 						image="images/Tastebuds_Spring_GIM.jpg"
