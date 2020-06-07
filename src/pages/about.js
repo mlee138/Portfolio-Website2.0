@@ -38,8 +38,26 @@ class About extends React.Component{
 							<span></span>
 						</div>
 						<div id="self-text">
-							<p>I am a Jr. Front-End Developer and a recent Binghamton University graduate. I'm based in New York City, and love designing and building websites.</p>
-							<div><pre>HTML     Time Management     CSS     Responsive Design      JavaScript     Sass     Git      React     jQuery     Teamwork     Critical Thinking</pre></div>
+							<p>I am a Jr. Front-End Developer and a recent Binghamton University graduate. I'm based in New York City, and love designing and building websites. Some of my hobbies include video games, hiking, watching movies, and coding.</p>
+							<div id="logos">
+								<span id="logos-ticker">
+									<img src="../images/html5.svg" alt="html5 logo"/>
+									<img src="../images/css3.svg" alt="css3 logo"/>
+									<img src="../images/javascript.svg" alt="javascript logo"/>
+									<img src="../images/react.svg" alt="react logo"/>
+									<img src="../images/sass.svg" alt="sass logo"/>
+									<img src="../images/github.svg" alt="github logo"/>
+								</span>
+								<span id="logos-ticker2">
+									<img src="../images/html5.svg" alt="html5 logo"/>
+									<img src="../images/css3.svg" alt="css3 logo"/>
+									<img src="../images/javascript.svg" alt="javascript logo"/>
+									<img src="../images/react.svg" alt="react logo"/>
+									<img src="../images/sass.svg" alt="sass logo"/>
+									<img src="../images/github.svg" alt="github logo"/>
+								</span>
+								<span id="fade"></span>
+							</div>
 						</div>
 					</section>
 					<div className="line"></div>

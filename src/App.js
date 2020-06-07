@@ -85,7 +85,7 @@ class App extends React.Component{
 				<div id="social-media">
 					<a href="https://www.facebook.com/matt.lee.thats.me" className="fa fa-facebook" target="_blank" rel="noopener noreferrer"></a>
 					<a href="https://www.linkedin.com/in/matthewlee1297/" className="fa fa-linkedin" target="_blank" rel="noopener noreferrer"></a>
-					<a href="https://twitter.com/MattLeeThatsMe" className="fa fa-twitter" target="_blank" rel="noopener noreferrer"></a>
+					<a href="https://github.com/mlee138" className="fa fa-github" target="_blank" rel="noopener noreferrer"></a>
 				</div>
 			</footer>
 		</div>

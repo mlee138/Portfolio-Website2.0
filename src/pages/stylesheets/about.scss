@@ -203,14 +203,34 @@
 		#self-text {
 			padding: 50px;
 			width: 80%;
-			div {
+			#logos {
+				display: flex;
+				position: relative;
+				padding: 10px;
+				border: none;
+				border-top: 2px solid lightgrey;
+				border-bottom: 2px solid lightgrey;
+				box-sizing: border-box;
+				width: 60%;
 				overflow: hidden;
-				width: 85%;
-				pre {
-					animation: skillScroll 30s linear infinite;
+				
+				#logos-ticker, #logos-ticker2 {
+					display: flex;
+					animation: skillScroll 40s linear infinite;
+					img { height: 40px; width: 120px;}
+				}
+				#fade {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background: rgb(255,255,255);
+					background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 30%, rgba(255,255,255,0) 60%, rgba(255,255,255,1) 100%);
 				}
 			}
 			
+
 		}
 
 		#cat-text { position: relative; }
@@ -244,11 +264,11 @@
 
 @keyframes skillScroll {
 	0% {
-		transform: translateX(90%);
+		transform: translateX(50%);
 	}
 
 	100% {
-		transform: translateX(-90%);
+		transform: translateX(-200%);
 	}
 }
 

@@ -316,14 +316,43 @@
   width: 80%;
 }
 
-#section-container section #self-text div {
+#section-container section #self-text #logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding: 10px;
+  border: none;
+  border-top: 2px solid lightgrey;
+  border-bottom: 2px solid lightgrey;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 60%;
   overflow: hidden;
-  width: 85%;
 }
 
-#section-container section #self-text div pre {
-  -webkit-animation: skillScroll 30s linear infinite;
-          animation: skillScroll 30s linear infinite;
+#section-container section #self-text #logos #logos-ticker, #section-container section #self-text #logos #logos-ticker2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: skillScroll 40s linear infinite;
+          animation: skillScroll 40s linear infinite;
+}
+
+#section-container section #self-text #logos #logos-ticker img, #section-container section #self-text #logos #logos-ticker2 img {
+  height: 40px;
+  width: 120px;
+}
+
+#section-container section #self-text #logos #fade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  background: -webkit-gradient(linear, left top, right top, from(white), color-stop(30%, rgba(255, 255, 255, 0)), color-stop(60%, rgba(255, 255, 255, 0)), to(white));
+  background: linear-gradient(90deg, white 0%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 60%, white 100%);
 }
 
 #section-container section #cat-text {
@@ -361,23 +390,23 @@
 
 @-webkit-keyframes skillScroll {
   0% {
-    -webkit-transform: translateX(90%);
-            transform: translateX(90%);
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
   }
   100% {
-    -webkit-transform: translateX(-90%);
-            transform: translateX(-90%);
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
   }
 }
 
 @keyframes skillScroll {
   0% {
-    -webkit-transform: translateX(90%);
-            transform: translateX(90%);
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
   }
   100% {
-    -webkit-transform: translateX(-90%);
-            transform: translateX(-90%);
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
   }
 }
 
